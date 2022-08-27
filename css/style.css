@@ -1,6 +1,8 @@
 :root {
   --header-footer-bg: #000000;
+  --header-bottom-bg: rgba(0, 0, 0, 0.5);
   --white: #ffffff;
+  --search: rgba(255, 255, 255, 0.85);
   --text: #333333;
 }
 
@@ -81,10 +83,14 @@ html {
   background-color: var(--header-footer-bg);
 }
 
-.header__container {
+.header__top-container {
   align-items: center;
   padding-top: 28px;
-  padding-bottom: 27px;
+  padding-bottom: 29px;
+}
+
+.burger {
+  display: none;
 }
 
 .header__logo-link {
@@ -115,4 +121,199 @@ html {
   font-size: 18px;
   line-height: 25px;
   color: white;
+}
+
+.header__bottom {
+  background-color: var(--header-bottom-bg);
+}
+
+.header__bottom-container {
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 22px;
+  padding-bottom: 21px;
+}
+
+.dropdown-menu {
+  transform: translateX(-2px);
+}
+
+.dropdown-menu__item {
+  position: relative;
+}
+
+.dropdown-menu__item:not(:last-child) {
+  margin-right: 97px;
+}
+
+.dropdown-menu__btn {
+  position: relative;
+  padding-right: 16px;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--white);
+}
+
+.dropdown-menu__btn::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 3px;
+  border-right: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+  height: 8px;
+  width: 8px;
+  transform: rotate(45deg);
+}
+
+.dropdown {
+  position: absolute;
+  left: -2px;
+  top: 183%;
+  padding: 40px;
+  width: 300px;
+  background-color: var(--header-bottom-bg);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in, visivility 0.3s ease-in-out;
+}
+
+.dropdown--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.dropdown__link {
+  display: block;
+  padding: 9px 14px 12px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.dropdown__link--tintoretto {
+  background-image: url("../img/tintoretto.jpg");
+}
+
+.dropdown__link--fridrih {
+  background-image: url("../img/fridrih.jpg");
+}
+
+.dropdown__link--leonardo {
+  background-image: url("../img/leonardo.jpg");
+}
+
+.dropdown__link--verrokkio {
+  background-image: url("../img/verrokkio.jpg");
+}
+
+.dropdown__link--mone {
+  background-image: url("../img/mone.jpg");
+}
+
+.dropdown__link--sisley {
+  background-image: url("../img/sisley.jpg");
+}
+
+.dropdown__link--mane {
+  background-image: url("../img/mane.jpg");
+}
+
+.dropdown__link--renuar {
+  background-image: url("../img/renuar.jpg");
+}
+
+.dropdown__link--van-gog {
+  background-image: url("../img/van-gog.jpg");
+}
+
+.dropdown__link--sezann {
+  background-image: url("../img/sezann.jpg");
+}
+
+.dropdown__link--gogen {
+  background-image: url("../img/gogen.jpg");
+}
+
+.dropdown__link--sera {
+  background-image: url("../img/sera.jpg");
+}
+
+.dropdown__link--kadinskiy {
+  background-image: url("../img/kandinskiy.jpg");
+}
+
+.dropdown__link--marinetty {
+  background-image: url("../img/marinetty.jpg");
+}
+
+.dropdown__link--malevich {
+  background-image: url("../img/malevich.jpg");
+}
+
+.dropdown__link--picasso {
+  background-image: url("../img/picasso.jpg");
+}
+
+.dropdown__link--karra {
+  background-image: url("../img/karra.jpg");
+}
+
+.dropdown__link--pratella {
+  background-image: url("../img/pratella.jpg");
+}
+
+.dropdown__link--severiny {
+  background-image: url("../img/severiny.jpg");
+}
+
+.dropdown__link--balla {
+  background-image: url("../img/balla.jpg");
+}
+
+.dropdown__text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--white);
+}
+
+.search {
+  align-items: center;
+}
+
+.search__search-btn {
+  margin-right: 10px;
+  transform: translateY(4px);
+}
+
+.search__input {
+  display: inline-block;
+  padding: 0;
+  padding-bottom: 1px;
+  max-width: 218px;
+  width: 218px;
+  border: none;
+  border-bottom: 1px solid var(--search);
+  border-radius: 0;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--white);
+  background: none;
+  outline: none;
+}
+
+.search__input::placeholder {
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--search);
+}
+
+.search__close-btn {
+  display: none;
 }
