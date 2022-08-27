@@ -38,3 +38,27 @@ html {
 ::after {
   box-sizing: inherit;
 }
+
+.body {
+  min-width: 320px;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 400;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  max-width: 1700px;
+  padding: 0 50px;
+}

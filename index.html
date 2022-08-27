@@ -12,8 +12,212 @@
   <script src="js/script.js" defer></script>
 </head>
 
-<body>
-
+<body class="body">
+  <header class="header">
+    <div class="headet__top">
+      <div class="contatiner">
+        <button class="burger btn-reset" aria-label="открыть меню навигации"></button>
+        <a class="header__logo-link" href="#">
+          <img class="logo" src="img/logo.svg" alt="Логотип Blanchard художественная галерея">
+        </a>
+        <nav class="nav">
+          <ul class="nav__list list-reset">
+            <li class="nav__item">
+              <a href="#about-us" class="nav__link">О&nbsp;нас</a>
+            </li>
+            <li class="nav__item">
+              <a href="#gallery" class="nav__link">Галерея</a>
+            </li>
+            <li class="nav__item">
+              <a href="#catalog" class="nav__link">Каталог</a>
+            </li>
+            <li class="nav__item">
+              <a href="#events" class="nav__link">События</a>
+            </li>
+            <li class="nav__item">
+              <a href="#projects" class="nav__link">Проекты</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="enter btn-reset">
+          <svg class="enter__svg" width="13" height="13" viewBox="0 0 13 13" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+              fill="white" />
+          </svg>
+          <span class="enter__text">Войти</span>
+        </button>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container">
+        <ul class="dropdown-menu">
+          <li class="dropdown-menu__item">
+            <button class="dropdown-btn btn-reset">Реализм</button>
+            <div class="dropdown">
+              <div class="dropdown__simplebar">
+                <ul class="dropdown__list list-reset">
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Тинторетто</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Фридрих</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Леонардо</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Верроккьо</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown-menu__item">
+            <button class="dropdown-btn btn-reset">Импрессионизм</button>
+            <div class="dropdown">
+              <div class="dropdown__simplebar">
+                <ul class="dropdown__list list-reset">
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Моне</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Сислей</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Мане</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Ренуар</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown-menu__item">
+            <button class="dropdown-btn btn-reset">Постимпрессионизм</button>
+            <div class="dropdown">
+              <div class="dropdown__simplebar">
+                <ul class="dropdown__list list-reset">
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Ван Гог</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Сезанн</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Гоген</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Сёра</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown-menu__item">
+            <button class="dropdown-btn btn-reset">Авангард</button>
+            <div class="dropdown">
+              <div class="dropdown__simplebar">
+                <ul class="dropdown__list list-reset">
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Кандинский</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Маринетти</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Малевич</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Пикассо</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown-menu__item">
+            <button class="dropdown-btn btn-reset">Футуризм</button>
+            <div class="dropdown">
+              <div class="dropdown__simplebar">
+                <ul class="dropdown__list list-reset">
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Карра</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Прателла</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Северини</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">
+                      <span class="dropdown__text">Балла</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <form class="search" action="" method="post">
+          <button class="search__search-btn btn-reset">
+            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z"
+                fill="white" />
+            </svg>
+          </button>
+          <input class="search__input" type="text" name="search" placeholder="Поиск по&nbsp;сайту" required>
+          <button class="search__close-btn btn-reset"></button>
+        </form>
+      </div>
+    </div>
+  </header>
 </body>
 
 </html>
