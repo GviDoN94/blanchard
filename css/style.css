@@ -1,28 +1,31 @@
+:root {
+  --header-footer-bg: #000000;
+  --white: #ffffff;
+  --text: #333333;
+}
+
 @font-face {
-  font-family: 'Open Sans';
-  src:
-    url('../fonts/OpenSansRegular.woff2') format('woff2'),
-    url('../fonts/OpenSansRegular.woff') format('woff');
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSansRegular.woff2") format("woff2"),
+    url("../fonts/OpenSansRegular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src:
-    url('../fonts/OpenSansSemiBold.woff2') format('woff2'),
-    url('../fonts/OpenSansSemiBold.woff') format('woff');
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSansSemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSansSemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src:
-    url('../fonts/OpenSansBold.woff2') format('woff2'),
-    url('../fonts/OpenSansBold.woff') format('woff');
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSansBold.woff2") format("woff2"),
+    url("../fonts/OpenSansBold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -41,7 +44,7 @@ html {
 
 .body {
   min-width: 320px;
-  font-family: 'Open Sans', 'sans-serif';
+  font-family: "Open Sans", "sans-serif";
   font-weight: 400;
 }
 
@@ -58,7 +61,58 @@ html {
   list-style: none;
 }
 
+.flex {
+  display: flex;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+}
+
 .container {
   max-width: 1700px;
+  margin: 0 auto;
   padding: 0 50px;
+}
+
+/* header */
+.header__top {
+  background-color: var(--header-footer-bg);
+}
+
+.header__container {
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 27px;
+}
+
+.header__logo-link {
+  margin-right: 180px;
+  transform: translateY(2px);
+}
+
+.nav {
+  margin-right: auto;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 62px;
+}
+
+.nav__link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--white);
+}
+
+.enter__svg {
+  margin-right: 2px;
+}
+
+.enter__text {
+  font-size: 18px;
+  line-height: 25px;
+  color: white;
 }
