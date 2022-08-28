@@ -147,7 +147,6 @@ html {
 }
 
 .dropdown-menu__btn {
-  position: relative;
   padding-right: 16px;
   font-size: 18px;
   line-height: 25px;
@@ -166,10 +165,16 @@ html {
   transform: rotate(45deg);
 }
 
+.dropdown-menu__btn--active::before {
+  top: 13px;
+  transform: rotate(225deg);
+}
+
 .dropdown {
   position: absolute;
   left: 0px;
   top: 47px;
+  z-index: -1;
   padding: 40px;
   width: 300px;
   background-color: var(--header-bottom-bg);
