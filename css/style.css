@@ -147,6 +147,7 @@ html {
 }
 
 .dropdown-menu__btn {
+  /* position: relative; */
   padding-right: 16px;
   font-size: 18px;
   line-height: 25px;
@@ -163,18 +164,19 @@ html {
   height: 8px;
   width: 8px;
   transform: rotate(45deg);
+  transition: transform, 0.3s ease-in-out, color 0.3s ease-in-out;
+  transform-origin: center;
 }
 
 .dropdown-menu__btn--active::before {
   top: 13px;
-  transform: rotate(225deg);
+  transform: rotate(-135deg);
 }
 
 .dropdown {
   position: absolute;
   left: 0px;
   top: 47px;
-  z-index: -1;
   padding: 40px;
   width: 300px;
   background-color: var(--header-bottom-bg);
@@ -186,6 +188,28 @@ html {
 .dropdown--active {
   opacity: 1;
   visibility: visible;
+}
+
+.dropdown__simplebar {
+  max-height: 220px;
+}
+
+.dropdown__simplebar
+.simplebar-track.simplebar-vertical {
+  right: -21px;
+  width: 2px;
+  background-color: var(--header-footer-bg);
+}
+
+.dropdown__simplebar
+.simplebar-track.simplebar-vertical
+.simplebar-scrollbar:before {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--white);
+  opacity: 1;
 }
 
 .dropdown__item:not(:last-child) {
