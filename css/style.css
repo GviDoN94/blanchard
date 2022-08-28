@@ -168,8 +168,8 @@ html {
 
 .dropdown {
   position: absolute;
-  left: -2px;
-  top: 183%;
+  left: 0px;
+  top: 47px;
   padding: 40px;
   width: 300px;
   background-color: var(--header-bottom-bg);
@@ -191,6 +191,10 @@ html {
   display: block;
   padding: 9px 14px 12px;
   width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--white);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -274,13 +278,6 @@ html {
 
 .dropdown__link--balla {
   background-image: url("../img/balla.jpg");
-}
-
-.dropdown__text {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
-  color: var(--white);
 }
 
 .search {
