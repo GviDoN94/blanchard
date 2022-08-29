@@ -23,7 +23,7 @@
     <div class="header__top">
       <div class="container header__top-container flex">
         <button class="burger btn-reset" aria-label="открыть меню навигации"></button>
-        <a class="header__logo-link" href="#" tabindex="-1">
+        <a class="header__logo-link">
           <img class="logo" src="img/logo.svg" alt="Логотип Blanchard художественная галерея">
         </a>
         <nav class="nav">
@@ -53,7 +53,7 @@
             <svg class="enter__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
-              d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z"/>
+                d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z" />
             </svg>
           </span>
           Войти
@@ -211,14 +211,16 @@
         </ul>
         <form class="search flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
           <button class="search__search-btn btn-reset" type="submit" aria-label="поиск">
-            <svg class="search__loupe" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="search__loupe" width="23" height="22" viewBox="0 0 23 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <rect width="6.8678" height="1.71695"
-                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"/>
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" />
               <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z"/>
+                d="M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z" />
             </svg>
           </button>
-          <input class="search__input" type="text" name="search" placeholder="Поиск по&nbsp;сайту" autocomplete="off" required>
+          <input class="search__input" type="text" name="search" placeholder="Поиск по&nbsp;сайту" autocomplete="off"
+            required>
           <button class="search__close-btn btn-reset" type="button" aria-label="закрыть поиск"></button>
         </form>
       </div>
