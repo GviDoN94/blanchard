@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="libs/simplebar/simplebar.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="libs/focus-visible/focus-visible.js" defer></script>
   <script src="libs/simplebar/simplebar.min.js" defer></script>
   <script src="js/script.js" defer></script>
 </head>
@@ -47,7 +48,7 @@
             </li>
           </ul>
         </nav>
-        <button class="enter btn-reset">
+        <button class="enter btn-reset flex">
           <svg class="enter__svg" width="13" height="13" viewBox="0 0 13 13" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -169,12 +170,11 @@
         </ul>
         <form class="search flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
           <button class="search__search-btn btn-reset" type="submit" aria-label="поиск">
-            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="search__loupe" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="6.8678" height="1.71695"
-                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"/>
               <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z"
-                fill="white" />
+                d="M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z"/>
             </svg>
           </button>
           <input class="search__input" type="text" name="search" placeholder="Поиск по&nbsp;сайту" required>
