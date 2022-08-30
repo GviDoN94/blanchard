@@ -37,3 +37,9 @@ dropMenu.addEventListener("click", (event) => {
     }
   });
 });
+
+/* Simplebar */
+Array.prototype.forEach.call(
+  document.querySelectorAll(".dropdown__simplebar"),
+  (el) => new SimpleBar(el)
+);
