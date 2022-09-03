@@ -43,3 +43,14 @@ Array.prototype.forEach.call(
   document.querySelectorAll(".dropdown__simplebar"),
   (el) => new SimpleBar(el)
 );
+
+/* swiper */
+const heroSwiper = new Swiper(".top-swiper__container", {
+  allowTouchMove: false,
+  loop: true,
+  effect: "fade",
+  speed: 10000,
+  autoplay: {
+    delay: 2000,
+  },
+});

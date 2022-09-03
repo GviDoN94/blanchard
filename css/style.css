@@ -38,6 +38,16 @@
   font-display: swap;
 }
 
+@keyframes resize {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
 /* global styles */
 @media (min-width: 1024px) {
   .nav__link:hover:not(.focus-visible) {
@@ -150,6 +160,10 @@ html {
   font-size: 16px;
   line-height: 32px;
   color: var(--text);
+}
+
+.top-wrap {
+  position: relative;
 }
 
 /* header */
@@ -624,6 +638,48 @@ html {
 .hero__link:active:not(.focus-visible) {
   border-color: var(--biloba-flower);
   background-color: var(--royal-purple);
+}
+
+.top-swiper {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.top-swiper__container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation-name: resize;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.top-swiper__slide {
+  background-color: var(--header-bottom-bg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.top-swiper__first-slide {
+  background-image: url("../img/hero-1.jpg");
+}
+
+.top-swiper__second-slide {
+  background-image: url("../img/hero-2.jpg");
+}
+
+.top-swiper__third-slide {
+  background-image: url("../img/hero-3.jpg");
 }
 
 /* about us */
