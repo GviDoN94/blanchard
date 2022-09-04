@@ -68,6 +68,28 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
     el: '.swiper-pagination',
     type: 'fraction',
   },
+  watchSlidesProgress: true,
+
+  on: {
+    init: function () {
+      this.slides.forEach((slide) => {
+        if (!slide.classList.contains("swiper-slide-visible")) {
+          slide.tabIndex = "-1";
+        } else {
+          slide.tabIndex = "";
+        }
+      });
+    },
+    slideChange: function () {
+      this.slides.forEach((slide) => {
+        if (!slide.classList.contains("swiper-slide-visible")) {
+          slide.tabIndex = "-1";
+        } else {
+          slide.tabIndex = "";
+        }
+      });
+    }
+  }
 });
 
 /* choices-js */

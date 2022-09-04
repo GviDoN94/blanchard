@@ -100,6 +100,10 @@
   .swiper-btn:hover:not(.focus-visible):not(.swiper-button-disabled) {
     background-color: var(--amethyst);
   }
+
+  .gallery-swiper__slide:hover:not(.focus-visible)::after {
+    opacity: 1;
+  }
 }
 
 html {
@@ -715,7 +719,6 @@ html {
 
 /* gallery */
 .gallery {
-  padding-bottom: 75px;
   background-image: url("../img/gallery-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -729,7 +732,6 @@ html {
 
 .gallery__left {
   flex-direction: column;
-  padding-bottom: 4px;
   width: calc(400 / 1600 * 100%);
   min-height: 435px;
 }
@@ -985,4 +987,43 @@ html {
   width: auto;
   color: var(--white);
   transform: translateY(2px);
+}
+
+.gallery-swiper__slide {
+  position: relative;
+  font-size: 0;
+}
+
+.gallery-swiper__slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 3px solid transparent;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+.gallery-swiper__slide::after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  background: var(--header-bottom-bg) url("../img/loupe.svg") no-repeat center 44%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-swiper__slide.focus-visible::before {
+  border-color: var(--royal-purple);
+}
+
+.gallery-swiper__slide:active:not(.focus-visible):before {
+  background-color: rgba(194, 131, 243, 0.4);
+}
+
+.gallery-swiper__slide:active:not(.focus-visible)::after {
+  opacity: 1;
 }
