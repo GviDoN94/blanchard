@@ -82,6 +82,10 @@
   .hero__link:hover:not(.focus-visible) {
     border-color: var(--biloba-flower);
   }
+
+  .checkbox__input:hover:not(.focus-visible) + .checkbox__text::before {
+    border-color: var(--heliotrope);
+  }
 }
 
 html {
@@ -153,6 +157,10 @@ html {
   font-size: 48px;
   line-height: 65px;
   color: var(--text);
+}
+
+.title--white {
+  color: var(--white);
 }
 
 .descr {
@@ -689,4 +697,98 @@ html {
 
 .about-us__descr {
   max-width: 1080px;
+}
+
+/* gallery */
+.gallery {
+  background-image: url("../img/gallery-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery__left {
+  flex-direction: column;
+  max-width: 400px;
+  min-height: 435px;
+}
+
+.filter {
+  flex-direction: column;
+}
+
+.gallery__filter {
+  margin-bottom: auto;
+}
+
+.filter__text {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--white);
+}
+
+.checkbox {
+  cursor: pointer;
+}
+
+.checkbox__text {
+  position: relative;
+  padding-left: 24px;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--white);
+  transition: color 0.3s ease-in-out;
+}
+
+.checkbox__text::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border: 1px solid var(--white);
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%);
+  transition: border-color 0.3s ease-in-out;
+}
+
+.checkbox__text::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  background-color: transparent;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.checkbox__input.focus-visible + .checkbox__text {
+  color: var(--heliotrope);
+}
+.checkbox__input.focus-visible + .checkbox__text::before {
+  border-color: var(--heliotrope);
+}
+
+.checkbox:active > .checkbox__text {
+  color: var(--heliotrope);
+}
+.checkbox:active > .checkbox__text::before {
+  border-color: var(--heliotrope);
+}
+
+.checkbox:active > .checkbox__text::after {
+  background-color: var(--heliotrope);
+}
+
+.checkbox__input:checked + .checkbox__text::before {
+  border-color: var(--heliotrope);
+}
+
+.checkbox__input:checked + .checkbox__text::after {
+  background-color: var(--heliotrope);
 }
