@@ -1,5 +1,5 @@
 :root {
-  --header-footer-bg: #000000;
+  --black: #000000;
   --header-bottom-bg: rgba(0, 0, 0, 0.5);
   --white: #ffffff;
   --search: rgba(255, 255, 255, 0.85);
@@ -12,6 +12,8 @@
   --dusty-gray: #999999;
   --select-active-bg: rgba(255, 255, 255, 0.2);
   --dove-gray: #666666;
+  --gallery: #ECECEC;
+  --silver: #CACACA;
 }
 
 @font-face {
@@ -93,6 +95,10 @@
 
   .checkbox__input:hover:not(.focus-visible) + .checkbox__text::before {
     border-color: var(--heliotrope);
+  }
+
+  .swiper-btn:hover:not(.focus-visible):not(.swiper-button-disabled) {
+    background-color: var(--amethyst);
   }
 }
 
@@ -184,7 +190,7 @@ html {
 
 /* header */
 .header__top {
-  background-color: var(--header-footer-bg);
+  background-color: var(--black);
 }
 
 .header__top-container {
@@ -398,7 +404,7 @@ html {
 .dropdown__simplebar .simplebar-track.simplebar-vertical {
   right: -21px;
   width: 2px;
-  background-color: var(--header-footer-bg);
+  background-color: var(--black);
 }
 
 .dropdown__simplebar
@@ -922,10 +928,25 @@ html {
 
 .swiper-btn {
   position: relative;
+  border: 2px solid transparent;
   border-radius: 50%;
   width: 30px;
   height: 30px;
   background-color: var(--dove-gray);
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.swiper-btn.focus-visible:not(.swiper-button-disabled) {
+  border-color: var(--black);
+}
+
+.swiper-btn:active:not(.focus-visible):not(.swiper-button-disabled) {
+  border-color: var(--black);
+  background-color: var(--royal-purple);
+}
+
+.swiper-button-disabled {
+  background-color: var(--gallery);
 }
 
 .swiper-btn--perv {
@@ -941,6 +962,7 @@ html {
   height: 8px;
   transform: translate(-50%, -50%) rotate(-45deg);
   transform-origin: center;
+  transition: border-color 0.3s ease-in-out;
 }
 
 .swiper-btn--perv::before {
@@ -951,6 +973,10 @@ html {
 .swiper-btn--next::before {
   border-bottom: 1px solid var(--white);
   border-right: 1px solid var(--white);
+}
+
+.swiper-button-disabled::before {
+  border-color: var(--silver);
 }
 
 .swiper-pagination {
