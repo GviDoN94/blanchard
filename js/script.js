@@ -54,3 +54,16 @@ const heroSwiper = new Swiper(".top-swiper__container", {
     delay: 2000,
   },
 });
+
+/* choices-js */
+const selectEl = document.querySelector(".filter__select");
+
+const choices = new Choices(selectEl, {
+  removeItems: false,
+  searchEnabled: false,
+  position: 'bottom',
+  shouldSort: false,
+});
+
+const selectItems = selectEl.querySelectorAll('div[aria-selected]');
+console.log(selectItems);
