@@ -13,10 +13,12 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="libs/simplebar/simplebar.css">
   <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="libs/choices-js/choices.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="libs/focus-visible/focus-visible.js" defer></script>
   <script src="libs/simplebar/simplebar.min.js" defer></script>
   <script src="libs/swiper/swiper-bundle.min.js" defer></script>
+  <script src="libs/choices-js/choices.min.js" defer></script>
   <script src="js/script.js" defer></script>
 </head>
 
@@ -244,9 +246,9 @@
     <div class="swiper top-swiper">
       <div class="top-swiper__container">
         <div class="swiper-wrapper top-swiper__swiper-wrapper">
-          <div class="swiper-slide top-swiper__slide top-swiper__first-slide"></div>
-          <div class="swiper-slide top-swiper__slide top-swiper__second-slide"></div>
-          <div class="swiper-slide top-swiper__slide top-swiper__third-slide"></div>
+          <div class="swiper-slide top-swiper__slide top-swiper__slide--first"></div>
+          <div class="swiper-slide top-swiper__slide top-swiper__slide--second"></div>
+          <div class="swiper-slide top-swiper__slide top-swiper__slide--third"></div>
         </div>
       </div>
     </div>
@@ -265,6 +267,82 @@
           В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность
           среди определённых слоёв населения, а&nbsp;значит, должны быть разоблачены.
         </p>
+      </div>
+    </section>
+    <section class="section gallery">
+      <div class="container gallery__container flex">
+        <div class="gallery__left flex">
+          <h2 class="title title--white">Галерея</h2>
+          <div class="filter gallery__filter flex">
+            <span class="filter__text">Фильтр:</span>
+            <select class="filter__select" name="genre">
+              <option value="painting">Живопись</option>
+              <option value="picture">Рисунок</option>
+              <option value="sculpture">Скульптура</option>
+            </select>
+          </div>
+          <ul class="checkboxes list-reset">
+            <li class="checkboxes__item">
+              <label class="checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="19_century">
+                <span class="checkbox__text">XIX век</span>
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <label class="checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="20_century">
+                <span class="checkbox__text">XX&nbsp;век</span>
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <label class="checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="modernity">
+                <span class="checkbox__text">Современность</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="gallery__right">
+          <div class="gallery-swiper-navigation flex">
+            <button class="swiper-btn swiper-btn--perv btn-reset" aria-label="Предыдущий слайд"></button>
+            <div class="swiper-pagination"></div>
+            <button class="swiper-btn swiper-btn--next btn-reset" aria-label="Следующий слайд"></button>
+          </div>
+          <div class="swiper gallery-swiper">
+            <div class="swiper-wrapper gallery-swiper-wrapper">
+              <button class="swiper-slide btn-reset gallery-swiper__slide gallery-swiper__slide--first" aria-label="Подробнее">
+                <picture>
+                  <img src="img/gallery-1.jpg" alt="Первая картина">
+                </picture>
+              </button>
+              <button class="swiper-slide btn-reset gallery-swiper__slide gallery-swiper__slide--second" aria-label="Подробнее">
+                <picture>
+                  <img src="img/gallery-2.jpg" alt="Вторая картина">
+                </picture>
+              </button>
+              <button class="swiper-slide btn-reset gallery-swiper__slide gallery-swiper__slide--third" aria-label="Подробнее">
+                <picture>
+                  <img src="img/gallery-3.jpg" alt="Третья картина">
+                </picture>
+              </button>
+              <button class="swiper-slide btn-reset gallery-swiper__slide gallery-swiper__slide--fourth" aria-label="Подробнее">
+                <picture>
+                  <img src="img/gallery-4.jpg" alt="Четвертая картина">
+                </picture>
+              </button>
+              <button class="swiper-slide btn-reset gallery-swiper__slide gallery-swiper__slide--fifth" aria-label="Подробнее">
+                <picture>
+                  <img src="img/gallery-5.jpg" alt="Пятая картина">
+                </picture>
+              </button>
+              <button class="swiper-slide btn-reset gallery-swiper__slide gallery-swiper__slide--sixth" aria-label="Подробнее">
+                <picture>
+                  <img src="img/gallery-6.jpg" alt="Шестая">
+                </picture>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
