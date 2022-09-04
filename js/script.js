@@ -55,15 +55,27 @@ const heroSwiper = new Swiper(".top-swiper__container", {
   },
 });
 
+const gallerySwiper = new Swiper(".gallery-swiper", {
+  allowTouchMove: false,
+  slidesPerGroup: 3,
+  slidesPerView: 3,
+  spaceBetween: 50,
+  navigation: {
+    prevEl: ".swiper-btn--perv",
+    nextEl: ".swiper-btn--next",
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+  },
+});
+
 /* choices-js */
 const selectEl = document.querySelector(".filter__select");
 
 const choices = new Choices(selectEl, {
   removeItems: false,
   searchEnabled: false,
-  position: 'bottom',
+  position: "bottom",
   shouldSort: false,
 });
-
-const selectItems = selectEl.querySelectorAll('div[aria-selected]');
-console.log(selectItems);

@@ -246,9 +246,9 @@
     <div class="swiper top-swiper">
       <div class="top-swiper__container">
         <div class="swiper-wrapper top-swiper__swiper-wrapper">
-          <div class="swiper-slide top-swiper__slide top-swiper__first-slide"></div>
-          <div class="swiper-slide top-swiper__slide top-swiper__second-slide"></div>
-          <div class="swiper-slide top-swiper__slide top-swiper__third-slide"></div>
+          <div class="swiper-slide top-swiper__slide top-swiper__slide--first"></div>
+          <div class="swiper-slide top-swiper__slide top-swiper__slide--second"></div>
+          <div class="swiper-slide top-swiper__slide top-swiper__slide--third"></div>
         </div>
       </div>
     </div>
@@ -270,7 +270,7 @@
       </div>
     </section>
     <section class="section gallery">
-      <div class="container flex">
+      <div class="container gallery__container flex">
         <div class="gallery__left flex">
           <h2 class="title title--white">Галерея</h2>
           <div class="filter gallery__filter flex">
@@ -301,6 +301,47 @@
               </label>
             </li>
           </ul>
+        </div>
+        <div class="gallery__right">
+          <div class="gallery-swiper-navigation flex">
+            <button class="swiper-btn swiper-btn--perv btn-reset" aria-label="Предыдущий слайд"></button>
+            <div class="swiper-pagination"></div>
+            <button class="swiper-btn swiper-btn--next btn-reset" aria-label="Следующий слайд"></button>
+          </div>
+          <div class="swiper gallery-swiper">
+            <div class="swiper-wrapper gallery-swiper-wrapper">
+              <button class="swiper-slide btn-reset gallery-swiper__slide gallery-swiper__slide--first">
+                <picture>
+                  <img src="img/gallery-1.jpg" alt="Первая картина">
+                </picture>
+              </button>
+              <button class="swiper-slide btn-reset gallery-swiper__slide gallery-swiper__slide--second">
+                <picture>
+                  <img src="img/gallery-2.jpg" alt="Вторая картина">
+                </picture>
+              </button>
+              <button class="swiper-slide btn-reset gallery-swiper__slide gallery-swiper__slide--third">
+                <picture>
+                  <img src="img/gallery-3.jpg" alt="Третья картина">
+                </picture>
+              </button>
+              <button class="swiper-slide btn-reset gallery-swiper__slide gallery-swiper__slide--fourth">
+                <picture>
+                  <img src="img/gallery-4.jpg" alt="Четвертая картина">
+                </picture>
+              </button>
+              <button class="swiper-slide btn-reset gallery-swiper__slide gallery-swiper__slide--fifth">
+                <picture>
+                  <img src="img/gallery-5.jpg" alt="Пятая картина">
+                </picture>
+              </button>
+              <button class="swiper-slide btn-reset gallery-swiper__slide gallery-swiper__slide--sixth">
+                <picture>
+                  <img src="img/gallery-6.jpg" alt="Шестая">
+                </picture>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
