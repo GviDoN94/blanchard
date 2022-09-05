@@ -148,10 +148,6 @@ html {
   list-style: none;
 }
 
-.flex {
-  display: flex;
-}
-
 .link {
   display: inline-block;
   outline: none;
