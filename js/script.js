@@ -65,8 +65,8 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
     nextEl: ".swiper-btn--next",
   },
   pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
+    el: ".swiper-pagination",
+    type: "fraction",
   },
   watchSlidesProgress: true,
 
@@ -88,8 +88,8 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
           slide.tabIndex = "";
         }
       });
-    }
-  }
+    },
+  },
 });
 
 /* choices-js */

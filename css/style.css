@@ -12,8 +12,8 @@
   --dusty-gray: #999999;
   --select-active-bg: rgba(255, 255, 255, 0.2);
   --dove-gray: #666666;
-  --gallery: #ECECEC;
-  --silver: #CACACA;
+  --gallery: #ececec;
+  --silver: #cacaca;
 }
 
 @font-face {
@@ -168,7 +168,7 @@ html {
   padding: 80px 0;
 }
 
-.title {
+.section__title {
   margin: 0;
   margin-bottom: 16px;
   font-weight: 400;
@@ -177,12 +177,13 @@ html {
   color: var(--text);
 }
 
-.title--white {
+.secton__title--white {
   color: var(--white);
 }
 
-.descr {
+.section__descr {
   margin: 0;
+  max-width: 1080px;
   font-size: 16px;
   line-height: 32px;
   color: var(--text);
@@ -713,10 +714,6 @@ html {
   padding-bottom: 70px;
 }
 
-.about-us__descr {
-  max-width: 1080px;
-}
-
 /* gallery */
 .gallery {
   background-image: url("../img/gallery-bg.jpg");
@@ -995,7 +992,7 @@ html {
 }
 
 .gallery-swiper__slide::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1005,13 +1002,14 @@ html {
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 .gallery-swiper__slide::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 25px;
   bottom: 25px;
   left: 25px;
   right: 25px;
-  background: var(--header-bottom-bg) url("../img/loupe.svg") no-repeat center 44%;
+  background: var(--header-bottom-bg) url("../img/loupe.svg") no-repeat center
+    44%;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
