@@ -199,6 +199,7 @@ html {
 }
 
 .header__top-container {
+  display: flex;
   align-items: center;
   padding-top: 28px;
   padding-bottom: 29px;
@@ -218,6 +219,7 @@ html {
 }
 
 .nav__list {
+  display: flex;
   flex-wrap: wrap;
 }
 
@@ -258,6 +260,7 @@ html {
 .enter {
   position: relative;
   z-index: 1;
+  display: flex;
   align-items: center;
   padding-left: 25px;
   font-size: 18px;
@@ -308,6 +311,7 @@ html {
 }
 
 .header__bottom-container {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 22px;
@@ -315,6 +319,7 @@ html {
 }
 
 .dropdown-menu {
+  display: flex;
   flex-wrap: wrap;
   transform: translateX(-2px);
 }
@@ -548,6 +553,7 @@ html {
 }
 
 .search {
+  display: flex;
   align-items: center;
   padding-left: 15px;
 }
@@ -609,6 +615,7 @@ html {
 }
 
 .hero__container {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -723,17 +730,20 @@ html {
 }
 
 .gallery__container {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .gallery__left {
+  display: flex;
   flex-direction: column;
   width: calc(400 / 1600 * 100%);
   min-height: 435px;
 }
 
 .filter {
+  display: flex;
   flex-direction: column;
 }
 
@@ -919,6 +929,7 @@ html {
 }
 
 .gallery-swiper-navigation {
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 31px;
@@ -1024,4 +1035,50 @@ html {
 
 .gallery-swiper__slide:active:not(.focus-visible)::after {
   opacity: 1;
+}
+
+/* catalog */
+.catalog__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__descr {
+  margin-bottom: 39px;
+}
+
+.catalog__left {
+  width: calc(750 / 1600 * 100%);
+}
+
+.catalog__right {
+  width: calc(800 / 1600 * 100%);
+}
+
+.painter-card__img {
+  margin-bottom: 26px;
+}
+
+.painter-card__name {
+  margin: 0;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--text);
+}
+
+.painter-card__lifetime {
+  display: block;
+  margin-bottom: 17px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--dusty-gray);
+}
+
+.painter-card__descr {
+  margin: 0;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--text);
 }
