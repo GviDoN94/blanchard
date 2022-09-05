@@ -1043,16 +1043,8 @@ html {
   margin-bottom: 39px;
 }
 
-.catalog__left {
+.painter-card {
   width: calc(750 / 1600 * 100%);
-}
-
-.catalog__right {
-  width: calc(800 / 1600 * 100%);
-}
-
-.painter-card__img {
-  margin-bottom: 26px;
 }
 
 .painter-card__name {
@@ -1075,6 +1067,33 @@ html {
 .painter-card__descr {
   margin: 0;
   font-size: 16px;
+  line-height: 32px;
+  color: var(--text);
+}
+
+.painter-card__img {
+  margin-bottom: 26px;
+}
+
+.accordion {
+  width: calc(800 / 1600 * 100%);
+}
+
+.accordion__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+  border-top: 1px solid var(--silver);
+  border-bottom: 1px solid var(--silver);
+  width: 100%;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.accordion__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 24px;
   line-height: 32px;
   color: var(--text);
 }
