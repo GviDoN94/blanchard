@@ -1061,8 +1061,16 @@ html {
   margin-bottom: 39px;
 }
 
-.painter-card {
+.catalog__left {
   width: calc(750 / 1600 * 100%);
+}
+
+.painter-card {
+  /* display: none; */
+}
+
+.painter-card__img {
+  margin-bottom: 26px;
 }
 
 .painter-card__name {
@@ -1082,12 +1090,16 @@ html {
   color: var(--dusty-gray);
 }
 
+.empty-card {
+  display: none
+}
+
 .painter-card__descr {
   margin: 0;
 }
 
-.painter-card__img {
-  margin-bottom: 26px;
+.empty-card__descr {
+  margin-bottom: 15px;
 }
 
 .accordion {
@@ -1257,7 +1269,7 @@ html {
   color: var(--text);
 }
 
-.temporary-stub-link {
+.accordion__link {
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
