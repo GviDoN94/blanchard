@@ -110,13 +110,17 @@
     border-color: var(--amethyst);
   }
 
-  .accordion__btn:hover:not(.focus-visible):not(:active) > .accordion__title {
+  .accordion__item:not(.accordion__item--active) .accordion__btn:hover:not(.focus-visible):not(:active) .accordion__title {
     color: var(--amethyst);
   }
 
-  .accordion__btn:hover:not(.focus-visible):not(:active) > .accordion__icon {
+  .accordion__item:not(.accordion__item--active)  .accordion__btn:hover:not(.focus-visible):not(:active) .accordion__icon {
     fill: var(--biloba-flower);
     stroke: var(--biloba-flower);
+  }
+
+  .accordion__painter-btn:hover:not(.focus-visible)::before {
+    background-color: var(--amethyst);
   }
 }
 
@@ -187,13 +191,16 @@ html {
   color: var(--text);
 }
 
-.secton__title--white {
+.section__title--white {
   color: var(--white);
 }
 
 .section__descr {
   margin: 0;
   max-width: 1080px;
+}
+
+.text {
   font-size: 16px;
   line-height: 32px;
   color: var(--text);
@@ -764,8 +771,6 @@ html {
 .filter__text {
   margin-bottom: 10px;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 32px;
   color: var(--white);
 }
 
@@ -781,7 +786,7 @@ html {
   transition: background-color 0.3s ease-in-out;
 }
 
-.choices.focus-visible:not(.is-open) > .choices__inner {
+.choices.focus-visible:not(.is-open) .choices__inner {
   border-color: var(--white);
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -876,8 +881,6 @@ html {
 .checkbox__text {
   position: relative;
   padding-left: 24px;
-  font-size: 16px;
-  line-height: 32px;
   color: var(--white);
   transition: color 0.3s ease-in-out;
 }
@@ -914,14 +917,14 @@ html {
   border-color: var(--heliotrope);
 }
 
-.checkbox:active > .checkbox__text {
+.checkbox:active .checkbox__text {
   color: var(--heliotrope);
 }
-.checkbox:active > .checkbox__text::before {
+.checkbox:active .checkbox__text::before {
   border-color: var(--heliotrope);
 }
 
-.checkbox:active > .checkbox__text::after {
+.checkbox:active .checkbox__text::after {
   background-color: var(--heliotrope);
 }
 
@@ -1080,9 +1083,6 @@ html {
 
 .painter-card__descr {
   margin: 0;
-  font-size: 16px;
-  line-height: 32px;
-  color: var(--text);
 }
 
 .painter-card__img {
@@ -1125,27 +1125,79 @@ html {
   transition-timing-function: ease-in-out;
 }
 
-.accordion__btn.focus-visible > .accordion__title {
+.accordion__item:not(.accordion__item--active) .accordion__btn.focus-visible .accordion__title {
   background-color: var(--amethyst);
   color: var(--white);
 }
 
-.accordion__btn.focus-visible > .accordion__icon {
+.accordion__item:not(.accordion__item--active) .accordion__btn.focus-visible .accordion__icon {
   fill: var(--biloba-flower);
   stroke: var(--biloba-flower);
 }
 
-.accordion__btn:active {
+.accordion__btn:active:not(.focus-visible) {
   z-index: 1;
   border-color: var(--royal-purple);
 }
 
-.accordion__btn:active > .accordion__title {
+.accordion__btn:active:not(.focus-visible) .accordion__title {
   color: var(--royal-purple);
 }
 
-.accordion__btn:active > .accordion__icon {
+.accordion__btn:active:not(.focus-visible) .accordion__icon {
   fill: var(--biloba-flower);
   stroke: var(--royal-purple);
   transform: rotate(0);
+}
+
+.accordion__content {
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.accordion__painter-list {
+  padding: 26px 0;
+  columns: 3;
+}
+
+.accordion__item.accordion__item--active .accordion__btn {
+  border-color: var(--royal-purple);
+}
+
+.accordion__item.accordion__item--active .accordion__title {
+  color: var(--royal-purple);
+}
+
+.accordion__item.accordion__item--active .accordion__icon {
+  fill: var(--biloba-flower);
+  stroke: var(--royal-purple);
+  transform: rotate(0);
+}
+
+.accordion__item.accordion__item--active .accordion__content {
+  visibility: visible;
+}
+
+.accordion__painter-btn {
+  position: relative;
+  padding-right: 3px;
+  transition: background-color 0.3s ease-in-out,
+}
+
+.accordion__painter-btn::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.accordion__painter-btn.focus-visible {
+  background-color: var(--amethyst);
+}
+
+.accordion__painter-btn:active:not(.focus-visible)::before {
+  background-color: transparent;
 }

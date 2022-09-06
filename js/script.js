@@ -101,3 +101,12 @@ const choices = new Choices(selectEl, {
   position: "bottom",
   shouldSort: false,
 });
+
+/* accordion */
+new Accordion('.accordion', {
+  elementClass: 'accordion__item',
+  triggerClass: 'accordion__btn',
+  panelClass: 'accordion__content',
+  activeClass:  'accordion__item--active',
+  openOnInit: [0],
+});
