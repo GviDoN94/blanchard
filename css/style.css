@@ -7,8 +7,8 @@
   --royal-purple: #7943a4;
   --heliotrope: #c283f3;
   --amethyst: #9d5cd0;
-  --drop-bg: rgba(194, 131, 243, 0.4);
   --biloba-flower: #d1a9f0;
+  --drop-bg: rgba(194, 131, 243, 0.4);
   --dusty-gray: #999999;
   --select-active-bg: rgba(255, 255, 255, 0.2);
   --dove-gray: #666666;
@@ -103,6 +103,20 @@
 
   .gallery-swiper__slide:hover:not(.focus-visible)::after {
     opacity: 1;
+  }
+
+  .accordion__btn:hover:not(.focus-visible):not(:active) {
+    z-index: 1;
+    border-color: var(--amethyst);
+  }
+
+  .accordion__btn:hover:not(.focus-visible):not(:active) > .accordion__title {
+    color: var(--amethyst);
+  }
+
+  .accordion__btn:hover:not(.focus-visible):not(:active) > .accordion__icon {
+    fill: var(--biloba-flower);
+    stroke: var(--biloba-flower);
   }
 }
 
@@ -1080,9 +1094,11 @@ html {
 }
 
 .accordion__btn {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: -1px;
   padding: 32px 0;
   border-top: 1px solid var(--silver);
   border-bottom: 1px solid var(--silver);
@@ -1092,8 +1108,44 @@ html {
 
 .accordion__title {
   margin: 0;
+  padding-right: 7px;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   color: var(--text);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.accordion__icon {
+  fill: var(--gallery);
+  stroke: var(--gallery);
+  transform: rotate(180deg);
+  transition-property: fill, stroke, transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.accordion__btn.focus-visible > .accordion__title {
+  background-color: var(--amethyst);
+  color: var(--white);
+}
+
+.accordion__btn.focus-visible > .accordion__icon {
+  fill: var(--biloba-flower);
+  stroke: var(--biloba-flower);
+}
+
+.accordion__btn:active {
+  z-index: 1;
+  border-color: var(--royal-purple);
+}
+
+.accordion__btn:active > .accordion__title {
+  color: var(--royal-purple);
+}
+
+.accordion__btn:active > .accordion__icon {
+  fill: var(--biloba-flower);
+  stroke: var(--royal-purple);
+  transform: rotate(0);
 }
