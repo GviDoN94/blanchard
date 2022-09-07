@@ -110,3 +110,20 @@ new Accordion(".accordion", {
   activeClass: "accordion__item--active",
   openOnInit: [0],
 });
+
+/* tabs */
+const tabEls = document.querySelectorAll(".accordion__painter-btn");
+const painterCards = document.querySelectorAll(".painter-card");
+
+document.querySelector(".accordion").addEventListener("click", (event) => {
+  if (!event.target.classList.contains("accordion__painter-btn")) {
+    return;
+  }
+
+  painterCards.forEach((el) => {
+    el.classList.remove("painter-card--active");
+    if (event.target.dataset.path === el.dataset.target) {
+      el.classList.add("painter-card--active");
+    }
+  });
+});

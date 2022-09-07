@@ -1064,7 +1064,7 @@ html {
 }
 
 .painter-card {
-  /* display: none; */
+  display: none;
 }
 
 .painter-card__img {
@@ -1088,16 +1088,20 @@ html {
   color: var(--dusty-gray);
 }
 
-.empty-card {
-  display: none;
-}
-
 .painter-card__descr {
   margin: 0;
 }
 
+.empty-card {
+  display: none;
+}
+
 .empty-card__descr {
   margin-bottom: 15px;
+}
+
+.painter-card--active {
+  display: block;
 }
 
 .accordion {
