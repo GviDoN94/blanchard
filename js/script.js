@@ -61,12 +61,12 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
   slidesPerView: 3,
   spaceBetween: 50,
   navigation: {
-    prevEl: ".swiper-btn--perv",
-    nextEl: ".swiper-btn--next",
+    prevEl: ".swiper__btn-prev",
+    nextEl: ".swiper__btn-next",
   },
   pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
+    el: ".swiper__pagination",
+    type: "fraction",
   },
   watchSlidesProgress: true,
 
@@ -88,8 +88,8 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
           slide.tabIndex = "";
         }
       });
-    }
-  }
+    },
+  },
 });
 
 /* choices-js */
@@ -100,4 +100,30 @@ const choices = new Choices(selectEl, {
   searchEnabled: false,
   position: "bottom",
   shouldSort: false,
+});
+
+/* accordion */
+new Accordion(".accordion", {
+  elementClass: "accordion__item",
+  triggerClass: "accordion__btn",
+  panelClass: "accordion__content",
+  activeClass: "accordion__item--active",
+  openOnInit: [0],
+});
+
+/* tabs */
+const tabEls = document.querySelectorAll(".accordion__painter-btn");
+const painterCards = document.querySelectorAll(".painter-card");
+
+document.querySelector(".accordion").addEventListener("click", (event) => {
+  if (!event.target.classList.contains("accordion__painter-btn")) {
+    return;
+  }
+
+  painterCards.forEach((el) => {
+    el.classList.remove("painter-card--active");
+    if (event.target.dataset.path === el.dataset.target) {
+      el.classList.add("painter-card--active");
+    }
+  });
 });
