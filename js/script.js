@@ -61,11 +61,11 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
   slidesPerView: 3,
   spaceBetween: 50,
   navigation: {
-    prevEl: ".swiper-btn--perv",
-    nextEl: ".swiper-btn--next",
+    prevEl: ".swiper__btn-prev",
+    nextEl: ".swiper__btn-next",
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper__pagination",
     type: "fraction",
   },
   watchSlidesProgress: true,
@@ -103,10 +103,10 @@ const choices = new Choices(selectEl, {
 });
 
 /* accordion */
-new Accordion('.accordion', {
-  elementClass: 'accordion__item',
-  triggerClass: 'accordion__btn',
-  panelClass: 'accordion__content',
-  activeClass:  'accordion__item--active',
+new Accordion(".accordion", {
+  elementClass: "accordion__item",
+  triggerClass: "accordion__btn",
+  panelClass: "accordion__content",
+  activeClass: "accordion__item--active",
   openOnInit: [0],
 });
