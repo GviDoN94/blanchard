@@ -61,11 +61,11 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
   slidesPerView: 3,
   spaceBetween: 50,
   navigation: {
-    prevEl: ".swiper__btn-prev",
-    nextEl: ".swiper__btn-next",
+    prevEl: ".gallery-swiper__btn-prev",
+    nextEl: ".gallery-swiper__btn-next",
   },
   pagination: {
-    el: ".swiper__pagination",
+    el: ".gallery-swiper__pagination",
     type: "fraction",
   },
   watchSlidesProgress: true,
@@ -97,10 +97,31 @@ const eventsSwiper = new Swiper(".events-swiper", {
   slidesPerGroup: 3,
   slidesPerView: 3,
   spaceBetween: 50,
-  // navigation: {
-  //   nextEl: '.swiper-button-next',
-  //   prevEl: '.swiper-button-prev',
-  // },
+  navigation: {
+    nextEl: '.events-swiper__btn-next',
+    prevEl: '.events-swiper__btn-prev',
+  },
+
+  on: {
+    init: function () {
+      this.slides.forEach((slide) => {
+        if (!slide.classList.contains("swiper-slide-visible")) {
+          slide.tabIndex = "-1";
+        } else {
+          slide.tabIndex = "";
+        }
+      });
+    },
+    slideChange: function () {
+      this.slides.forEach((slide) => {
+        if (!slide.classList.contains("swiper-slide-visible")) {
+          slide.tabIndex = "-1";
+        } else {
+          slide.tabIndex = "";
+        }
+      });
+    },
+  },
 });
 
 /* choices-js */
