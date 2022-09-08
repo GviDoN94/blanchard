@@ -130,6 +130,14 @@
   .accordion__painter-btn:hover:not(.focus-visible)::before {
     background-color: var(--amethyst);
   }
+
+  .event-card__link:hover:not(.focus-visible) {
+    color: var(--royal-purple);
+  }
+
+  .event-card__link:hover:not(.focus-visible)::after {
+    background-color: var(--royal-purple);
+  }
 }
 
 html {
@@ -1330,6 +1338,54 @@ html {
 }
 
 .event-card__link {
+  position: relative;
+  z-index: 1;
+  align-self: start;
   margin-top: auto;
   color: var(--amethyst);
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.event-card__link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 3px;
+  bottom: -5px;
+  left: -8px;
+  right: -8px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.event-card__link::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--amethyst);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.event-card__link.focus-visible {
+  color: var(--white);
+  transform: translateX(8px);
+}
+
+.event-card__link.focus-visible::before {
+  background-color: var(--amethyst);
+}
+
+.event-card__link.focus-visible::after {
+  background-color: var(--white);
+}
+
+.event-card__link:active:not(.focus-visible) {
+  color: var(--text);
+}
+
+.event-card__link:active:not(.focus-visible)::after {
+  background-color: var(--text);
 }

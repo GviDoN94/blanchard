@@ -92,6 +92,17 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
   },
 });
 
+const eventsSwiper = new Swiper(".events-swiper", {
+  allowTouchMove: false,
+  slidesPerGroup: 3,
+  slidesPerView: 3,
+  spaceBetween: 50,
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  // },
+});
+
 /* choices-js */
 const selectEl = document.querySelector(".filter__select");
 
