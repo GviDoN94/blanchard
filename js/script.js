@@ -61,11 +61,11 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
   slidesPerView: 3,
   spaceBetween: 50,
   navigation: {
-    prevEl: ".swiper__btn-prev",
-    nextEl: ".swiper__btn-next",
+    prevEl: ".gallery-swiper__btn-prev",
+    nextEl: ".gallery-swiper__btn-next",
   },
   pagination: {
-    el: ".swiper__pagination",
+    el: ".gallery-swiper__pagination",
     type: "fraction",
   },
   watchSlidesProgress: true,
@@ -86,6 +86,39 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
           slide.tabIndex = "-1";
         } else {
           slide.tabIndex = "";
+        }
+      });
+    },
+  },
+});
+
+const eventsSwiper = new Swiper(".events-swiper", {
+  allowTouchMove: false,
+  slidesPerGroup: 3,
+  slidesPerView: 3,
+  spaceBetween: 50,
+  navigation: {
+    nextEl: ".events-swiper__btn-next",
+    prevEl: ".events-swiper__btn-prev",
+  },
+  watchSlidesProgress: true,
+
+  on: {
+    init: function () {
+      document.querySelectorAll(".event-card__link").forEach((eventLink) => {
+        if (!eventLink.closest(".swiper-slide-visible")) {
+          eventLink.tabIndex = "-1";
+        } else {
+          eventLink.tabIndex = "";
+        }
+      });
+    },
+    slideChange: function () {
+      document.querySelectorAll(".event-card__link").forEach((eventLink) => {
+        if (!eventLink.closest(".swiper-slide-visible")) {
+          eventLink.tabIndex = "-1";
+        } else {
+          eventLink.tabIndex = "";
         }
       });
     },
