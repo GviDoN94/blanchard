@@ -98,26 +98,27 @@ const eventsSwiper = new Swiper(".events-swiper", {
   slidesPerView: 3,
   spaceBetween: 50,
   navigation: {
-    nextEl: '.events-swiper__btn-next',
-    prevEl: '.events-swiper__btn-prev',
+    nextEl: ".events-swiper__btn-next",
+    prevEl: ".events-swiper__btn-prev",
   },
+  watchSlidesProgress: true,
 
   on: {
     init: function () {
-      this.slides.forEach((slide) => {
-        if (!slide.classList.contains("swiper-slide-visible")) {
-          slide.tabIndex = "-1";
+      document.querySelectorAll(".event-card__link").forEach((eventLink) => {
+        if (!eventLink.closest(".swiper-slide-visible")) {
+          eventLink.tabIndex = "-1";
         } else {
-          slide.tabIndex = "";
+          eventLink.tabIndex = "";
         }
       });
     },
     slideChange: function () {
-      this.slides.forEach((slide) => {
-        if (!slide.classList.contains("swiper-slide-visible")) {
-          slide.tabIndex = "-1";
+      document.querySelectorAll(".event-card__link").forEach((eventLink) => {
+        if (!eventLink.closest(".swiper-slide-visible")) {
+          eventLink.tabIndex = "-1";
         } else {
-          slide.tabIndex = "";
+          eventLink.tabIndex = "";
         }
       });
     },
