@@ -976,6 +976,7 @@ html {
 .btn-prev,
 .btn-next {
   font-size: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .gallery-swiper__btn-prev {
@@ -1332,7 +1333,6 @@ html {
 .events-swiper__btn-next .btn-next__icon {
   fill: var(--gallery);
   stroke: var(--gallery);
-  display: block;
 }
 
 .events-swiper__btn-prev .btn-prev__icon path:last-child,
@@ -1353,9 +1353,10 @@ html {
   stroke: var(--amethyst);
 }
 
-.events-swiper__btn-prev.swiper-button-disabled .btn-prev__icon,
-.events-swiper__btn-next.swiper-button-disabled .btn-next__icon {
-  display: none;
+.events-swiper__btn-prev.swiper-button-disabled,
+.events-swiper__btn-next.swiper-button-disabled {
+  opacity: 0;
+  cursor: auto;
 }
 
 .event-card {
