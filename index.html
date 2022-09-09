@@ -305,8 +305,8 @@
           </ul>
         </div>
         <div class="gallery__right">
-          <div class="gallery-swiper__navigation">
-            <button class="gallery-swiper__btn-prev btn-prev btn-reset" aria-label="Предыдущий слайд">
+          <div class="swiper-navigation">
+            <button class="btn-prev btn-prev--dark btn-reset" aria-label="Предыдущий слайд">
               <svg class="btn-prev__icon" width="30" height="30" viewBox="0 0 30 30" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -315,8 +315,8 @@
                 <path d="M14 20L19 15L14 10" />
               </svg>
             </button>
-            <div class="gallery-swiper__pagination"></div>
-            <button class="gallery-swiper__btn-next btn-next btn-reset" aria-label="Следующий слайд">
+            <div class="swiper-navigation__pagination"></div>
+            <button class="btn-next btn-next--dark btn-reset" aria-label="Следующий слайд">
               <svg class="btn-next__icon" width="30" height="30" viewBox="0 0 30 30" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -401,7 +401,7 @@
               <h3 class="painter-card__name">Что мы&nbsp;о&nbsp;нём знаем?</h3>
               <p class="painter-card__descr text empty-card__descr">Пока ничего... Зато мы&nbsp;точно знаем, что
                 в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
-              <a href="#gallery" class="accordion__link link">В&nbsp;галерею</a>
+              <a href="#gallery" class="to-gallery link">В&nbsp;галерею</a>
             </article>
           </div>
           <ul class="accordion list-reset">
@@ -531,7 +531,7 @@
                   <div class="temporary-stub__right">
                     <h4 class="temporary-stub-title">Здесь пока пусто</h4>
                     <p class="temporary-stub-descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                    <a href="#gallery" class="accordion__link link">В&nbsp;галерею</a>
+                    <a href="#gallery" class="to-gallery link">В&nbsp;галерею</a>
                   </div>
                 </div>
               </div>
@@ -553,7 +553,7 @@
                   <div class="temporary-stub__right">
                     <h4 class="temporary-stub-title">Здесь пока пусто</h4>
                     <p class="temporary-stub-descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                    <a href="#gallery" class="accordion__link link">В&nbsp;галерею</a>
+                    <a href="#gallery" class="to-gallery link">В&nbsp;галерею</a>
                   </div>
                 </div>
               </div>
@@ -575,7 +575,7 @@
                   <div class="temporary-stub__right">
                     <h4 class="temporary-stub-title">Здесь пока пусто</h4>
                     <p class="temporary-stub-descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                    <a href="#gallery" class="accordion__link link">В&nbsp;галерею</a>
+                    <a href="#gallery" class="to-gallery link">В&nbsp;галерею</a>
                   </div>
                 </div>
               </div>
@@ -597,7 +597,7 @@
                   <div class="temporary-stub__right">
                     <h4 class="temporary-stub-title">Здесь пока пусто</h4>
                     <p class="temporary-stub-descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                    <a href="#gallery" class="accordion__link link">В&nbsp;галерею</a>
+                    <a href="#gallery" class="to-gallery link">В&nbsp;галерею</a>
                   </div>
                 </div>
               </div>
@@ -619,7 +619,7 @@
                   <div class="temporary-stub__right">
                     <h4 class="temporary-stub-title">Здесь пока пусто</h4>
                     <p class="temporary-stub-descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                    <a href="#gallery" class="accordion__link link">В&nbsp;галерею</a>
+                    <a href="#gallery" class="to-gallery link">В&nbsp;галерею</a>
                   </div>
                 </div>
               </div>
@@ -641,7 +641,7 @@
                   <div class="temporary-stub__right">
                     <h4 class="temporary-stub-title">Здесь пока пусто</h4>
                     <p class="temporary-stub-descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                    <a href="#gallery" class="accordion__link link">В&nbsp;галерею</a>
+                    <a href="#gallery" class="to-gallery link">В&nbsp;галерею</a>
                   </div>
                 </div>
               </div>
@@ -654,7 +654,7 @@
       <div class="container">
         <h2 class="section__title">События</h2>
         <div class="events__content">
-          <button class="events-swiper__btn-prev btn-prev btn-reset" aria-label="Предыдущий слайд">
+          <button class="btn-prev btn-prev--light-big btn-reset" aria-label="Предыдущий слайд">
             <svg class="btn-prev__icon" width="50" height="50" viewBox="0 0 30 30" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -663,7 +663,7 @@
               <path d="M14 20L19 15L14 10" />
             </svg>
           </button>
-          <button class="events-swiper__btn-next btn-next btn-reset" aria-label="Следующий слайд">
+          <button class="btn-next btn-next--light-big btn-reset" aria-label="Следующий слайд">
             <svg class="btn-next__icon" width="50" height="50" viewBox="0 0 30 30" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -676,7 +676,8 @@
             <ul class="swiper-wrapper events-swiper__wrapper list-reset">
               <li class="swiper-slide event-card">
                 <picture>
-                  <img class="event-card__img" src="img/events-1.jpg" alt="Арт выставки Книжная гравюра в живом восприятии">
+                  <img class="event-card__img" src="img/events-1.jpg"
+                    alt="Арт выставки Книжная гравюра в живом восприятии">
                 </picture>
                 <div class="event-card__content">
                   <span class="event-card__museum">Музей им. Щусева</span>
@@ -723,7 +724,8 @@
               </li>
               <li class="swiper-slide event-card">
                 <picture>
-                  <img class="event-card__img" src="img/events-4.jpg" alt="Арт выставки Джон Винзор. Фотографии из серии Метафора">
+                  <img class="event-card__img" src="img/events-4.jpg"
+                    alt="Арт выставки Джон Винзор. Фотографии из серии Метафора">
                 </picture>
                 <div class="event-card__content">
                   <span class="event-card__museum">ММАМ</span>
@@ -739,7 +741,8 @@
               </li>
               <li class="swiper-slide event-card">
                 <picture>
-                  <img class="event-card__img" src="img/events-5.jpg " alt="Арт XXIV Международной биеннале молодого искусства">
+                  <img class="event-card__img" src="img/events-5.jpg "
+                    alt="Арт XXIV Международной биеннале молодого искусства">
                 </picture>
                 <div class="event-card__content">
                   <span class="event-card__museum">Третьяковка на&nbsp;Крымском валу</span>
@@ -754,6 +757,23 @@
             </ul>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="section section--small-padding projects" id="projects">
+      <div class="container">
+        <h2 class="section__title">Проекты</h2>
+        <p class="section__descr text">
+          Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
+          фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны
+          с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой неузнаваемости, из-за чего возрастает
+          их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское обеспечение нашей
+          деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет
+          сомнений, что действия представителей оппозиции могут быть рассмотрены исключительно в&nbsp;разрезе
+          маркетинговых и&nbsp;финансовых предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также
+          представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою
+          очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой неузнаваемости.
+          Подробнее: <a class="projects__link link" href="#">blanchard-art.ru/projects</a>
+        </p>
       </div>
     </section>
   </main>

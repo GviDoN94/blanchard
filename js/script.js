@@ -61,11 +61,11 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
   slidesPerView: 3,
   spaceBetween: 50,
   navigation: {
-    prevEl: ".gallery-swiper__btn-prev",
-    nextEl: ".gallery-swiper__btn-next",
+    prevEl: ".btn-prev--dark",
+    nextEl: ".btn-next--dark",
   },
   pagination: {
-    el: ".gallery-swiper__pagination",
+    el: ".swiper-navigation__pagination",
     type: "fraction",
   },
   watchSlidesProgress: true,
@@ -98,8 +98,8 @@ const eventsSwiper = new Swiper(".events-swiper", {
   slidesPerView: 3,
   spaceBetween: 50,
   navigation: {
-    nextEl: ".events-swiper__btn-next",
-    prevEl: ".events-swiper__btn-prev",
+    nextEl: ".btn-next--light-big",
+    prevEl: ".btn-prev--light-big",
   },
   watchSlidesProgress: true,
 
