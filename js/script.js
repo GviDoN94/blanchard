@@ -12,7 +12,7 @@ dropMenu.addEventListener("click", (event) => {
   }
 
   dropMenuBtns.forEach((btn) => {
-    if (activeDrop == btn) {
+    if (activeDrop === btn) {
       const drop = btn
         .closest(".dropdown-menu__item")
         .querySelector(".dropdown");
@@ -159,4 +159,29 @@ document.querySelector(".accordion").addEventListener("click", (event) => {
       el.classList.add("painter-card--active");
     }
   });
+});
+
+/* tooltips */
+tippy(".tooltip", {
+  theme: "projects-tooltips",
+  trigger: "click",
+  maxWidth: 264,
+  duration: [300, 300],
+});
+
+const tooltips = document.querySelectorAll(".tooltip");
+
+tooltips.forEach((el) => {
+  el.addEventListener("click", () => {
+    tooltips.forEach((el) => el.classList.remove("tooltip--active"));
+    if (el.hasAttribute("aria-describedby")) {
+      el.classList.toggle("tooltip--active");
+    }
+  });
+});
+
+document.addEventListener("click", (el) => {
+  if (!el.target.closest(".tooltip")) {
+    tooltips.forEach((el) => el.classList.remove("tooltip--active"));
+  }
 });
