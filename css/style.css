@@ -131,6 +131,10 @@
     background-color: var(--amethyst);
   }
 
+  .to-gallery:hover:not(.focus-visible)::after {
+    background-color: var(--amethyst);
+  }
+
   .btn-prev--light-big:hover:not(.focus-visible):not(:active):not(.swiper-button-disabled)
     .btn-prev__icon,
   .btn-next--light-big:hover:not(.focus-visible):not(:active):not(.swiper-button-disabled)
@@ -147,8 +151,14 @@
     background-color: var(--royal-purple);
   }
 
-  .tooltip:hover:not(.focus-visible):not(.tooltip--active) .tooltip__icon path:first-child {
+  .tooltip:hover:not(.focus-visible):not(.tooltip--active)
+    .tooltip__icon
+    path:first-child {
     fill: var(--biloba-flower);
+  }
+
+  .projects__link:hover:not(.focus-visible)::after {
+    background-color: var(--amethyst);
   }
 }
 
@@ -1302,10 +1312,52 @@ html {
 }
 
 .to-gallery {
+  position: relative;
+  z-index: 111;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
   color: var(--amethyst);
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.to-gallery::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -1px;
+  bottom: -3px;
+  left: -6px;
+  right: -6px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.to-gallery::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.to-gallery.focus-visible {
+  color: var(--white);
+  transform: translateX(6px);
+}
+
+.to-gallery.focus-visible::before {
+  background-color: var(--amethyst);
+}
+
+.to-gallery:active:not(.focus-visible) {
+  color: var(--royal-purple);
+}
+.to-gallery:active:not(.focus-visible)::after {
+  background-color: var(--royal-purple);
 }
 
 /* events */
@@ -1528,5 +1580,45 @@ html {
 }
 
 .projects__link {
+  position: relative;
   color: var(--amethyst);
+  transition: color 0.3s ease-in-out;
+}
+
+.projects__link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 2px;
+  bottom: 2px;
+  left: -5px;
+  right: -5px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.projects__link::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.projects__link.focus-visible {
+  color: var(--white);
+}
+
+.projects__link.focus-visible::before {
+  background-color: var(--amethyst);
+}
+
+.projects__link:active:not(.focus-visible) {
+  color: var(--royal-purple);
+}
+.projects__link:active:not(.focus-visible)::after {
+  background-color: var(--royal-purple);
 }
