@@ -160,6 +160,11 @@
   .projects__link:hover:not(.focus-visible)::after {
     background-color: var(--amethyst);
   }
+
+  .partner:hover:not(:focus-visible) .partner__img {
+    filter: grayscale(0);
+    opacity: 1;
+  }
 }
 
 html {
@@ -1663,6 +1668,7 @@ html {
   align-items: center;
   border: 1px solid var(--silver);
   min-height: 148px;
+  background-color: var(--white);
   transition: border-color 0.3s ease-in-out;
 }
 
@@ -1670,4 +1676,17 @@ html {
   filter: grayscale(1);
   opacity: 0.3;
   transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.partner.focus-visible {
+  border-color: var(--amethyst);
+}
+
+.partner:active:not(.focus-visible) {
+  border-color: var(--amethyst);
+}
+
+.partner:active:not(.focus-visible) .partner__img {
+  filter: grayscale(0);
+  opacity: 1;
 }
