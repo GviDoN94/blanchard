@@ -12,7 +12,7 @@ dropMenu.addEventListener("click", (event) => {
   }
 
   dropMenuBtns.forEach((btn) => {
-    if (activeDrop == btn) {
+    if (activeDrop === btn) {
       const drop = btn
         .closest(".dropdown-menu__item")
         .querySelector(".dropdown");
@@ -61,11 +61,11 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
   slidesPerView: 3,
   spaceBetween: 50,
   navigation: {
-    prevEl: ".gallery-swiper__btn-prev",
-    nextEl: ".gallery-swiper__btn-next",
+    prevEl: ".btn-prev--dark",
+    nextEl: ".btn-next--dark",
   },
   pagination: {
-    el: ".gallery-swiper__pagination",
+    el: ".swiper-navigation__pagination",
     type: "fraction",
   },
   watchSlidesProgress: true,
@@ -98,8 +98,8 @@ const eventsSwiper = new Swiper(".events-swiper", {
   slidesPerView: 3,
   spaceBetween: 50,
   navigation: {
-    nextEl: ".events-swiper__btn-next",
-    prevEl: ".events-swiper__btn-prev",
+    nextEl: ".btn-next--light-big",
+    prevEl: ".btn-prev--light-big",
   },
   watchSlidesProgress: true,
 
@@ -115,6 +115,39 @@ const eventsSwiper = new Swiper(".events-swiper", {
     },
     slideChange: function () {
       document.querySelectorAll(".event-card__link").forEach((eventLink) => {
+        if (!eventLink.closest(".swiper-slide-visible")) {
+          eventLink.tabIndex = "-1";
+        } else {
+          eventLink.tabIndex = "";
+        }
+      });
+    },
+  },
+});
+
+const partnersSwiper = new Swiper(".partners-swiper", {
+  allowTouchMove: false,
+  slidesPerGroup: 3,
+  slidesPerView: 3,
+  spaceBetween: 50,
+  navigation: {
+    prevEl: ".partners__btn-prev",
+    nextEl: ".partners__btn-next",
+  },
+  watchSlidesProgress: true,
+
+  on: {
+    init: function () {
+      document.querySelectorAll(".partner").forEach((eventLink) => {
+        if (!eventLink.closest(".swiper-slide-visible")) {
+          eventLink.tabIndex = "-1";
+        } else {
+          eventLink.tabIndex = "";
+        }
+      });
+    },
+    slideChange: function () {
+      document.querySelectorAll(".partner").forEach((eventLink) => {
         if (!eventLink.closest(".swiper-slide-visible")) {
           eventLink.tabIndex = "-1";
         } else {
@@ -159,4 +192,29 @@ document.querySelector(".accordion").addEventListener("click", (event) => {
       el.classList.add("painter-card--active");
     }
   });
+});
+
+/* tooltips */
+tippy(".tooltip", {
+  theme: "projects-tooltips",
+  trigger: "click",
+  maxWidth: 264,
+  duration: [300, 300],
+});
+
+const tooltips = document.querySelectorAll(".tooltip");
+
+tooltips.forEach((el) => {
+  el.addEventListener("click", () => {
+    tooltips.forEach((el) => el.classList.remove("tooltip--active"));
+    if (el.hasAttribute("aria-describedby")) {
+      el.classList.toggle("tooltip--active");
+    }
+  });
+});
+
+document.addEventListener("click", (el) => {
+  if (!el.target.closest(".tooltip")) {
+    tooltips.forEach((el) => el.classList.remove("tooltip--active"));
+  }
 });
