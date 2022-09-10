@@ -1696,11 +1696,12 @@ html {
   opacity: 1;
 }
 
+/* contacts */
 .contacts__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 44px 0;
+  padding: 37px 0;
 }
 
 .address {
@@ -1715,4 +1716,63 @@ html {
   font-size: 24px;
   line-height: 32px;
   color: var(--text);
+}
+
+.callback {
+  display: flex;
+  justify-content: space-between;
+  width: calc(909 / 1600 * 100%);
+}
+
+.callback__name,
+.callback__phone {
+  padding: 9px 24px;
+  border: 1px solid var(--text);
+  border-radius: 100px;
+  max-width: 270px;
+  width: 100%;
+  height: 50px;
+}
+
+.callback__name::placeholder,
+.callback__phone::placeholder {
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--dusty-gray);
+}
+
+.callback__btn {
+  padding: 10px 33px;
+  border: 2px solid var(--amethyst);
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--amethyst);
+}
+
+.social {
+  width: calc(276 / 1600 * 100%);
+}
+
+.social__title {
+  margin: 0;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--text);
+}
+
+.social__list {
+  display: flex;
+}
+
+.social__item {
+  margin-right: 20px;
+  font-size: 0;
+}
+
+.social__link {
+  display: inline-block;
 }

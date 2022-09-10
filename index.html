@@ -892,8 +892,10 @@
             <span class="address__location text">Леонтьевский переулок, дом 5/1</span>
           </address>
           <form class="callback" action="https://jsonplaceholder.typicode.com/posts" method="post">
-            <input class="callback__name" type="text" value="name" placeholder="Имя*" autocomplete="off">
-            <input class="callback__phone" type="tel" value="phone" placeholder="Телефон*" autocomplete="off">
+            <input class="callback__name" type="text" name="username" placeholder="Имя*" autocomplete="off"
+              aria-label="Введите ваше имя">
+            <input class="callback__phone" type="tel" name="phone" placeholder="Телефон*" autocomplete="off"
+              aria-label="Введите ваш номер телефона">
             <button class="callback__btn btn-reset" type="submit">Заказать обратный звонок</button>
           </form>
           <div class="social">
