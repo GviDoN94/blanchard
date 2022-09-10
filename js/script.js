@@ -125,6 +125,39 @@ const eventsSwiper = new Swiper(".events-swiper", {
   },
 });
 
+const partnersSwiper = new Swiper(".partners-swiper", {
+  allowTouchMove: false,
+  slidesPerGroup: 3,
+  slidesPerView: 3,
+  spaceBetween: 50,
+  navigation: {
+    prevEl: ".partners__btn-prev",
+    nextEl: ".partners__btn-next",
+  },
+  watchSlidesProgress: true,
+
+  on: {
+    init: function () {
+      document.querySelectorAll(".partner").forEach((eventLink) => {
+        if (!eventLink.closest(".swiper-slide-visible")) {
+          eventLink.tabIndex = "-1";
+        } else {
+          eventLink.tabIndex = "";
+        }
+      });
+    },
+    slideChange: function () {
+      document.querySelectorAll(".partner").forEach((eventLink) => {
+        if (!eventLink.closest(".swiper-slide-visible")) {
+          eventLink.tabIndex = "-1";
+        } else {
+          eventLink.tabIndex = "";
+        }
+      });
+    },
+  },
+});
+
 /* choices-js */
 const selectEl = document.querySelector(".filter__select");
 
