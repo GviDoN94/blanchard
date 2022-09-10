@@ -1695,3 +1695,24 @@ html {
   filter: grayscale(0);
   opacity: 1;
 }
+
+.contacts__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 44px 0;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  width: calc(256 / 1600 * 100%);
+  font-style: normal;
+}
+
+.address__place {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--text);
+}
