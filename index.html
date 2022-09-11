@@ -25,6 +25,7 @@
   <script src="libs//tippy.js/tippy-bundle.umd.js" defer></script>
   <script src="libs/inputmask/inputmask.min.js" defer></script>
   <script src="libs/just-validate/just-validate.min.js" defer></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=a0c78ffa-cc0d-4d98-859c-705b71d8aad2&lang=ru_RU" type="text/javascript" defer></script>
   <script src="js/script.js" defer></script>
 </head>
 
@@ -895,12 +896,12 @@
           </address>
           <form class="callback" action="https://jsonplaceholder.typicode.com/posts" method="post">
             <div class="callback__input-wrap">
-              <input class="callback__input callback__name" type="text" name="username" placeholder="Имя*" autocomplete="off"
-              aria-label="Введите ваше имя">
+              <input class="callback__input callback__name" type="text" name="username" placeholder="Имя*"
+                autocomplete="off" aria-label="Введите ваше имя">
             </div>
             <div class="callback__input-wrap">
-              <input class="callback__input callback__phone" type="tel" name="phone" placeholder="Телефон*" autocomplete="off"
-                aria-label="Введите ваш номер телефона">
+              <input class="callback__input callback__phone" type="tel" name="phone" placeholder="Телефон*"
+                autocomplete="off" aria-label="Введите ваш номер телефона">
             </div>
             <button class="callback__btn btn-reset" type="submit">Заказать обратный звонок</button>
           </form>
@@ -909,7 +910,8 @@
             <ul class="social__list list-reset">
               <li class="social__item">
                 <a href="#" class="social__link link">
-                  <svg class="social__icon whatsup" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="social__icon whatsup" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_191243_648)">
                       <path
                         d="M20 39.375C30.7005 39.375 39.375 30.7005 39.375 20C39.375 9.29948 30.7005 0.625 20 0.625C9.29948 0.625 0.625 9.29948 0.625 20C0.625 30.7005 9.29948 39.375 20 39.375Z"
@@ -928,7 +930,8 @@
               </li>
               <li class="social__item">
                 <a href="#" class="social__link link">
-                  <svg class="social__icon telegram" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="social__icon telegram" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_191243_651)">
                       <path
                         d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
@@ -949,6 +952,7 @@
           </div>
         </div>
       </div>
+      <div class="map" id="map"></div>
     </section>
   </main>
 </body>

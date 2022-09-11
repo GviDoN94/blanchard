@@ -265,3 +265,34 @@ validation
       errorMessage: "Неверный телефон",
     },
   ]);
+
+/* map */
+ymaps.ready(init);
+function init() {
+  // Создание карты.
+  const yandexMap = new ymaps.Map(
+    "map",
+    {
+      center: [55.75846806898367, 37.60108849999989],
+      controls: ["geolocationControl", "zoomControl"],
+      zoom: 14,
+    },
+    {
+      zoomControlSize: "medium",
+      zoomControlPosition: { top: "260px", right: "10px" },
+      geolocationControlSize: "large",
+      geolocationControlPosition: { top: "355px", right: "10px" },
+    }
+  );
+  const mapPoint = new ymaps.Placemark(
+    [55.75846806898367, 37.60108849999989],
+    {},
+    {
+      iconLayout: "default#image",
+      iconImageHref: "img/map-point.svg",
+      iconImageSize: [20, 20],
+    }
+  );
+  yandexMap.geoObjects.add(mapPoint);
+  yandexMap.behaviors.disable("scrollZoom");
+}

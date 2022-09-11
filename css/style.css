@@ -14,7 +14,7 @@
   --dove-gray: #666666;
   --gallery: #ececec;
   --silver: #cacaca;
-  --error: #D11616;
+  --error: #d11616;
 }
 
 @font-face {
@@ -1737,6 +1737,7 @@ html {
   position: relative;
   display: flex;
   flex-direction: column;
+  width: calc(270 / 909 * 100%);
 }
 
 .callback__input {
@@ -1745,7 +1746,6 @@ html {
   border-radius: 100px;
   outline: none;
   max-width: 270px;
-  width: 100%;
   height: 50px;
   font-weight: 400;
   font-size: 16px;
@@ -1871,4 +1871,14 @@ html {
 
 .social__link:active:not(.focus-visible)::before {
   border-color: var(--amethyst);
+}
+
+.map {
+  margin: 0 auto;
+  max-width: 1920px;
+  height: 700px;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
 }
