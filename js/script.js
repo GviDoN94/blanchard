@@ -218,3 +218,81 @@ document.addEventListener("click", (el) => {
     tooltips.forEach((el) => el.classList.remove("tooltip--active"));
   }
 });
+
+/* inputmask */
+const inputTel = document.querySelector(".callback__phone");
+const telMask = new Inputmask("+7 (999)-999-99-99");
+telMask.mask(inputTel);
+
+/* just-validate */
+const validation = new JustValidate(".callback", {
+  errorFieldCssClass: "callback__input--invalid",
+  errorLabelCssClass: "lable-invalid",
+});
+
+validation
+  .addField(".callback__name", [
+    {
+      rule: "required",
+      errorMessage: "Введите имя",
+    },
+    {
+      rule: "minLength",
+      value: 2,
+      errorMessage: "Имя слишком короткое",
+    },
+    {
+      rule: "maxLength",
+      value: 30,
+      errorMessage: "Имя слишком длинное",
+    },
+    {
+      rule: "customRegexp",
+      value: /^[a-zа-яё]+(?: [a-zа-яё]+)?$/i,
+      errorMessage: "Неверный формат имени",
+    },
+  ])
+  .addField(".callback__phone", [
+    {
+      rule: "required",
+      errorMessage: "Введите телефон",
+    },
+    {
+      validator: (name, value) => {
+        const phone = inputTel.inputmask.unmaskedvalue();
+        return Boolean(+phone && phone.length === 10);
+      },
+      errorMessage: "Неверный телефон",
+    },
+  ]);
+
+/* map */
+ymaps.ready(init);
+function init() {
+  // Создание карты.
+  const yandexMap = new ymaps.Map(
+    "map",
+    {
+      center: [55.75846806898367, 37.60108849999989],
+      controls: ["geolocationControl", "zoomControl"],
+      zoom: 14,
+    },
+    {
+      zoomControlSize: "medium",
+      zoomControlPosition: { top: "260px", right: "10px" },
+      geolocationControlSize: "large",
+      geolocationControlPosition: { top: "355px", right: "10px" },
+    }
+  );
+  const mapPoint = new ymaps.Placemark(
+    [55.75846806898367, 37.60108849999989],
+    {},
+    {
+      iconLayout: "default#image",
+      iconImageHref: "img/map-point.svg",
+      iconImageSize: [20, 20],
+    }
+  );
+  yandexMap.geoObjects.add(mapPoint);
+  yandexMap.behaviors.disable("scrollZoom");
+}
