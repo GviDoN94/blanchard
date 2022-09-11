@@ -23,6 +23,8 @@
   <script src="libs/accordion/accordion.min.js" defer></script>
   <script src="libs/tippy.js/popper.min.js" defer></script>
   <script src="libs//tippy.js/tippy-bundle.umd.js" defer></script>
+  <script src="libs/inputmask/inputmask.min.js" defer></script>
+  <script src="libs/just-validate/just-validate.min.js" defer></script>
   <script src="js/script.js" defer></script>
 </head>
 
@@ -892,10 +894,14 @@
             <span class="address__location text">Леонтьевский переулок, дом 5/1</span>
           </address>
           <form class="callback" action="https://jsonplaceholder.typicode.com/posts" method="post">
-            <input class="callback__input" type="text" name="username" placeholder="Имя*" autocomplete="off"
+            <div class="callback__input-wrap">
+              <input class="callback__input callback__name" type="text" name="username" placeholder="Имя*" autocomplete="off"
               aria-label="Введите ваше имя">
-            <input class="callback__input" type="tel" name="phone" placeholder="Телефон*" autocomplete="off"
-              aria-label="Введите ваш номер телефона">
+            </div>
+            <div class="callback__input-wrap">
+              <input class="callback__input callback__phone" type="tel" name="phone" placeholder="Телефон*" autocomplete="off"
+                aria-label="Введите ваш номер телефона">
+            </div>
             <button class="callback__btn btn-reset" type="submit">Заказать обратный звонок</button>
           </form>
           <div class="social">
