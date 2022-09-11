@@ -165,6 +165,14 @@
     filter: grayscale(0);
     opacity: 1;
   }
+
+  .callback__input:hover:not(.focus-visible) {
+    background-color: var(--gallery);
+  }
+
+  .social__link:hover:not(.focus-visible):not(:active) {
+    opacity: 0.5;
+  }
 }
 
 html {
@@ -1724,24 +1732,29 @@ html {
   width: calc(909 / 1600 * 100%);
 }
 
-.callback__name,
-.callback__phone {
+.callback__input {
   padding: 9px 24px;
   border: 1px solid var(--text);
   border-radius: 100px;
+  outline: none;
   max-width: 270px;
   width: 100%;
   height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--text);
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
-.callback__name::placeholder,
-.callback__phone::placeholder {
+.callback__input::placeholder {
   font-size: 16px;
   line-height: 32px;
   color: var(--dusty-gray);
 }
 
 .callback__btn {
+  position: relative;
   padding: 10px 33px;
   border: 2px solid var(--amethyst);
   border-radius: 100px;
@@ -1749,6 +1762,49 @@ html {
   font-size: 18px;
   line-height: 25px;
   color: var(--amethyst);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.callback__btn::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  bottom: -7px;
+  left: -7px;
+  right: -7px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.callback__btn::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  border: 3px solid transparent;
+  border-radius: 100px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.callback__btn.focus-visible::before {
+  border-color: var(--heliotrope);
+}
+
+.callback__btn:hover:not(:focus-visible) {
+  color: white;
+  background-color: var(--amethyst);
+}
+
+.callback__btn:active:not(:focus-visible) {
+  color: var(--white);
+  background-color: var(--royal-purple);
+}
+
+.callback__btn:active:not(:focus-visible)::after {
+  border-color: var(--biloba-flower);
 }
 
 .social {
@@ -1774,5 +1830,25 @@ html {
 }
 
 .social__link {
+  position: relative;
   display: inline-block;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.social__link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.social__link.focus-visible {
+  opacity: 0.5;
+}
+
+.social__link:active:not(.focus-visible)::before {
+  border-color: var(--amethyst);
 }
