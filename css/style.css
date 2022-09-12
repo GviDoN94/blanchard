@@ -171,8 +171,12 @@
     background-color: var(--gallery);
   }
 
-  .social__link:hover:not(.focus-visible):not(:active) {
+  .messenger__link:hover:not(.focus-visible):not(:active) {
     opacity: 0.5;
+  }
+
+  .social__link:hover:not(.focus-visible) {
+    color: var(--white);
   }
 }
 
@@ -1827,11 +1831,11 @@ html {
   border-color: var(--biloba-flower);
 }
 
-.social {
+.messenger {
   width: calc(276 / 1600 * 100%);
 }
 
-.social__title {
+.messenger__title {
   margin: 0;
   margin-bottom: 6px;
   font-weight: 600;
@@ -1840,22 +1844,25 @@ html {
   color: var(--text);
 }
 
-.social__list {
+.messenger__list {
   display: flex;
 }
 
-.social__item {
-  margin-right: 20px;
+.messenger__item {
   font-size: 0;
 }
 
-.social__link {
+.messenger__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.messenger__link {
   position: relative;
   display: inline-block;
   transition: opacity 0.3s ease-in-out;
 }
 
-.social__link::before {
+.messenger__link::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -1865,20 +1872,57 @@ html {
   transition: border-color 0.3s ease-in-out;
 }
 
-.social__link.focus-visible {
+.messenger__link.focus-visible {
   opacity: 0.5;
 }
 
-.social__link:active:not(.focus-visible)::before {
+.messenger__link:active:not(.focus-visible)::before {
   border-color: var(--amethyst);
 }
 
 .map {
   margin: 0 auto;
-  max-width: 1920px;
   height: 700px;
 }
 
 [class*="ground-pane"] {
   filter: grayscale(1);
+}
+
+/* footer */
+.footer {
+  padding: 48px 0 45px;
+  background-color: var(--black);
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social__link {
+  display: inline-block;
+  color: var(--silver);
+  transition: color 0.3s ease-in-out;
+}
+
+.social__icon {
+  fill: currentColor;
+}
+
+.social__link.focus-visible {
+  color: var(--white);
+}
+
+.social__link:active:not(.focus-visible) {
+  color: var(--amethyst);
 }
