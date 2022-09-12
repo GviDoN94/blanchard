@@ -269,7 +269,6 @@ validation
 /* map */
 ymaps.ready(init);
 function init() {
-  // Создание карты.
   const yandexMap = new ymaps.Map(
     "map",
     {
