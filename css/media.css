@@ -19,7 +19,7 @@
 
 @media (max-width: 1024px) {
   /* header */
-  .body {
+  .top-wrap {
     overflow: hidden;
   }
 
@@ -116,5 +116,28 @@
 
   .search--top {
     display: flex;
+  }
+
+  /* hero */
+  .hero {
+    padding: 105px 0 115px;
+  }
+
+  .hero__descr {
+    margin-bottom: 123px;
+    max-width: 660px;
+    transform: translateY(-11px);
+  }
+
+  .top-swiper__slide--first {
+    background-image: url("../img/hero-1-1024.jpg");
+  }
+
+  .top-swiper__slide--second {
+    background-image: url("../img/hero-2-1024.jpg");
+  }
+
+  .top-swiper__slide--third {
+    background-image: url("../img/hero-3-1024.jpg");
   }
 }
