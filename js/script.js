@@ -295,3 +295,18 @@ function init() {
   yandexMap.geoObjects.add(mapPoint);
   yandexMap.behaviors.disable("scrollZoom");
 }
+
+/* burger */
+// const openBurgerBtn = document.querySelector('.burger');
+// const closeBurgerBtn = document.querySelector(".nav__close-btn");
+const burgerMenuEl = document.querySelector(".nav");
+
+document
+  .querySelector(".burger")
+  .addEventListener("click", () => burgerMenuEl.classList.add("nav--active"));
+
+document
+  .querySelector(".nav__close-btn")
+  .addEventListener("click", () =>
+    burgerMenuEl.classList.remove("nav--active")
+  );
