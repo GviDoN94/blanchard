@@ -308,3 +308,16 @@ document
   .addEventListener("click", () =>
     burgerMenuEl.classList.remove("nav--active")
   );
+
+/* search */
+const searchForm = document.querySelector(".search--top");
+
+document
+  .querySelector(".open-search")
+  .addEventListener("click", () => searchForm.classList.add("search--active"));
+
+document
+  .querySelector(".search__close-btn")
+  .addEventListener("click", () =>
+    searchForm.classList.remove("search--active")
+  );
