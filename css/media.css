@@ -1,0 +1,30 @@
+@media (max-width: 1024px) {
+  /* header */
+  .header__top-container {
+    padding-bottom: 27px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .header__bottom {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .header__logo-link {
+    transform: translate(-3px, 1px);
+  }
+
+  .open-search {
+    display: inline-block;
+  }
+
+  /* .search--top {
+    display: flex;
+  } */
+}

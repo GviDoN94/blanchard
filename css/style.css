@@ -77,8 +77,10 @@
     border-color: var(--amethyst);
   }
 
-  .search__search-btn:hover:not(.focus-visible):not(:active) {
-    color: var(--heliotrope);
+  .burger:hover:not(.focus-visible),
+  .search__search-btn:hover:not(.focus-visible):not(:active),
+  .open-search:hover:not(.focus-visible) {
+    color: var(--amethyst);
   }
 
   .search__input:hover {
@@ -281,6 +283,12 @@ html {
 
 .burger {
   display: none;
+  color: var(--white);
+  transition: color 0.3s ease-in-out;
+}
+
+.burger__icon {
+  fill: currentColor;
 }
 
 .header__logo-link {
@@ -645,14 +653,6 @@ html {
   transition: color 0.3s ease-in-out;
 }
 
-.search__search-btn.focus-visible {
-  color: var(--royal-purple);
-}
-
-.search__search-btn:active {
-  color: var(--amethyst);
-}
-
 .search__loupe {
   fill: currentColor;
 }
@@ -683,8 +683,33 @@ html {
   border-bottom-color: var(--royal-purple);
 }
 
-.search__close-btn {
+.search--top {
   display: none;
+  width: 314px;
+}
+
+.open-search {
+  display: none;
+  font-size: 0;
+  transform: translateX(1px);
+  color: var(--white);
+  transition: color 0.3s ease-in-out;
+}
+
+.burger.focus-visible,
+.search__search-btn.focus-visible,
+.open-search.focus-visible {
+  color: var(--amethyst);
+}
+
+.burger:active:not(.focus-visible),
+.search__search-btn:active:not(.focus-visible),
+.open-search:active:not(.focus-visible) {
+  color: var(--royal-purple);
+}
+
+.open-search__icon {
+  fill: currentColor;
 }
 
 /* hero */
