@@ -296,9 +296,7 @@ function init() {
   yandexMap.behaviors.disable("scrollZoom");
 }
 
-/* burger */
-// const openBurgerBtn = document.querySelector('.burger');
-// const closeBurgerBtn = document.querySelector(".nav__close-btn");
+/* burger menu */
 const burgerMenuEl = document.querySelector(".nav");
 
 document

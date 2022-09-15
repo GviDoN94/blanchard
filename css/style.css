@@ -284,6 +284,7 @@ html {
 
 .burger {
   display: none;
+  font-size: 0;
   color: var(--white);
   transition: color 0.3s ease-in-out;
 }
@@ -707,8 +708,35 @@ html {
 }
 
 .search--top {
+  position: absolute;
+  top: 50%;
+  right: 44px;
+  padding: 0 7px;
   display: none;
-  width: 314px;
+  width: 319px;
+  background-color: var(--black);
+  transform: translate(500px, -50%);
+  transform-origin: right;
+  visibility: hidden;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.search--active {
+  visibility: visible;
+  transform: translate(0, -50%);
+}
+
+.search--top .search__search-btn {
+  transform: translateY(0);
+}
+
+.search--top .search__input {
+  margin-right: 24px;
+  padding-bottom: 4px;
+}
+
+.search__close-btn {
+  transform: translateY(5px);
 }
 
 .open-search {

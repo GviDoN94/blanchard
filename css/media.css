@@ -19,6 +19,10 @@
 
 @media (max-width: 1024px) {
   /* header */
+  .body {
+    overflow: hidden;
+  }
+
   .header__top {
     position: relative;
   }
@@ -29,6 +33,10 @@
 
   .header__bottom {
     display: none;
+  }
+
+  .burger {
+    display: inline-block;
   }
 
   .nav {
@@ -98,10 +106,6 @@
     background: transparent;
   }
 
-  .burger {
-    display: inline-block;
-  }
-
   .header__logo-link {
     transform: translate(-3px, 1px);
   }
@@ -110,7 +114,7 @@
     display: inline-block;
   }
 
-  /* .search--top {
+  .search--top {
     display: flex;
-  } */
+  }
 }
