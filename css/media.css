@@ -17,6 +17,12 @@
   --error: #d11616;
 }
 
+@media (max-width: 1350px) {
+  .accordion__painter-list {
+    columns: 2;
+  }
+}
+
 @media (max-width: 1024px) {
   /* header */
   .top-wrap {
@@ -156,5 +162,42 @@
 
   .swiper-navigation {
     padding: 0 1px;
+  }
+
+  /* catalog */
+  .catalog__left {
+    width: calc(437 / 925 * 100%);
+  }
+
+  .painter-card__img {
+    margin-bottom: 27px;
+  }
+
+  .painter-card__name {
+    margin-bottom: 10px;
+  }
+
+  .painter-card__lifetime {
+    margin-bottom: 15px;
+  }
+
+  .empty-card__descr {
+    line-height: 22px;
+  }
+
+  .accordion {
+    width: calc(437 / 925 * 100%);
+  }
+
+  .temporary-stub__left {
+    max-width: 189px;
+    min-height: 130px;
+  }
+
+  .temporary-stub__left::before {
+    top: 6px;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
   }
 }
