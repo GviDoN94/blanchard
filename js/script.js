@@ -72,8 +72,8 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
     1025: {
       slidesPerGroup: 3,
       slidesPerView: 3,
-      spaceBetween: 50
-    }
+      spaceBetween: 50,
+    },
   },
   watchSlidesProgress: true,
 
@@ -108,12 +108,16 @@ const eventsSwiper = new Swiper(".events-swiper", {
     nextEl: ".btn-next--light-big",
     prevEl: ".btn-prev--light-big",
   },
+  pagination: {
+    el: ".events__pagination",
+    type: "bullets",
+  },
   breakpoints: {
     1025: {
       slidesPerGroup: 3,
       slidesPerView: 3,
-      spaceBetween: 50
-    }
+      spaceBetween: 50,
+    },
   },
   watchSlidesProgress: true,
 

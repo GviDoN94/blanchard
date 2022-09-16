@@ -148,6 +148,10 @@
   }
 
   /* gallery */
+  .gallery {
+    background-image: url("../img/gallery-bg-1024.jpg");
+  }
+
   .gallery__left {
     width: calc(280 / 925 * 100%);
   }
@@ -202,6 +206,10 @@
   }
 
   /* events */
+  .events {
+    padding-bottom: 80px;
+  }
+
   .event-card {
     min-height: 683px;
   }
@@ -222,5 +230,12 @@
 
   .event-card__title {
     margin-bottom: 5px;
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    display: block;
   }
 }
