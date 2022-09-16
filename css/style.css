@@ -1395,7 +1395,7 @@ html {
   top: 10px;
   bottom: 10px;
   left: 10px;
-  right: 10px;
+  right: 10 px;
   background-color: var(--dusty-gray);
 }
 
@@ -1531,17 +1531,29 @@ html {
   opacity: 0;
 }
 
+.events-swiper__slide {
+  display: flex;
+  height: auto;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 700px;
+}
+
 .event-card__img {
   display: block;
+  width: 100%;
 }
 
 .event-card__content {
   display: flex;
   flex-direction: column;
+  flex: 1;
   padding: 14px 50px 40px;
   border: 1px solid var(--silver);
   border-top: none;
-  min-height: 345px;
 }
 
 .event-card__museum,

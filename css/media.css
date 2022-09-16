@@ -200,4 +200,27 @@
     left: 6px;
     right: 6px;
   }
+
+  /* events */
+  .event-card {
+    min-height: 683px;
+  }
+
+  .event-card__content {
+    padding: 14px 33px 48px;
+  }
+
+  .event-card__museum,
+  .event-card__duration {
+    text-align: right;
+    font-weight: 400;
+  }
+
+  .event-card__duration {
+    margin-bottom: 4px;
+  }
+
+  .event-card__title {
+    margin-bottom: 5px;
+  }
 }

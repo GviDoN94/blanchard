@@ -103,10 +103,17 @@ const eventsSwiper = new Swiper(".events-swiper", {
   allowTouchMove: false,
   slidesPerGroup: 3,
   slidesPerView: 3,
-  spaceBetween: 50,
+  spaceBetween: 27,
   navigation: {
     nextEl: ".btn-next--light-big",
     prevEl: ".btn-prev--light-big",
+  },
+  breakpoints: {
+    1025: {
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+      spaceBetween: 50
+    }
   },
   watchSlidesProgress: true,
 
