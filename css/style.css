@@ -895,7 +895,6 @@ html {
   display: flex;
   flex-direction: column;
   width: calc(400 / 1600 * 100%);
-  min-height: 435px;
 }
 
 .filter {
@@ -1011,6 +1010,10 @@ html {
 .choices__list--dropdown .choices__item--selectable::after,
 .choices__list[aria-expanded] .choices__item--selectable::after {
   display: none;
+}
+
+.checkboxes {
+  margin-top: 10px;
 }
 
 .checkbox {
@@ -1186,6 +1189,10 @@ html {
 
 .gallery-swiper__slide:active:not(.focus-visible)::after {
   opacity: 1;
+}
+
+.gallery-swiper__img {
+  width: 100%;
 }
 
 /* catalog */

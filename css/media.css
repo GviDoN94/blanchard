@@ -140,4 +140,21 @@
   .top-swiper__slide--third {
     background-image: url("../img/hero-3-1024.jpg");
   }
+
+  /* gallery */
+  .gallery__left {
+    width: calc(280 / 925 * 100%);
+  }
+
+  .checkboxes {
+    padding-bottom: 35px;
+  }
+
+  .gallery__right {
+    width: calc(595 / 925 * 100%);
+  }
+
+  .swiper-navigation {
+    padding: 0 1px;
+  }
 }
