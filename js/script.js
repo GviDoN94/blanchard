@@ -331,26 +331,26 @@ function init() {
 
 /* burger menu */
 const burgerMenuEl = document.querySelector(".nav");
+const bodyEl = document.querySelector(".body");
 
-document
-  .querySelector(".burger")
-  .addEventListener("click", () => burgerMenuEl.classList.add("nav--active"));
+document.querySelector(".burger").addEventListener("click", () => {
+  burgerMenuEl.classList.add("nav--active");
+  bodyEl.classList.add("stop-scroll");
+});
 
-document
-  .querySelector(".nav__close-btn")
-  .addEventListener("click", () =>
-    burgerMenuEl.classList.remove("nav--active")
-  );
+document.querySelector(".nav__close-btn").addEventListener("click", () => {
+  burgerMenuEl.classList.remove("nav--active");
+  bodyEl.classList.remove("stop-scroll");
+});
 
 /* search */
 const searchForm = document.querySelector(".search--top");
+const searchCloseBtn = document.querySelector(".search__close-btn");
 
-document
-  .querySelector(".open-search")
-  .addEventListener("click", () => searchForm.classList.add("search--active"));
+document.querySelector(".open-search").addEventListener("click", () => {
+  searchForm.classList.add("search--active");
 
-document
-  .querySelector(".search__close-btn")
-  .addEventListener("click", () =>
+  searchCloseBtn.addEventListener("click", () =>
     searchForm.classList.remove("search--active")
   );
+});

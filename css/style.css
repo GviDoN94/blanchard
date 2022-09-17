@@ -194,7 +194,7 @@ html {
 }
 
 .body {
-  min-width: 1024px;
+  min-width: 320px;
   font-family: "Open Sans", "sans-serif";
   font-weight: 400;
   background-color: var(--white);
@@ -223,6 +223,10 @@ html {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.stop-scroll {
+  overflow: hidden;
 }
 
 .link {
@@ -739,6 +743,11 @@ html {
   transform: translateY(5px);
 }
 
+.search__close-btn .close-btn__icon {
+  width: 23px;
+  height: 23px;
+}
+
 .open-search {
   display: none;
   font-size: 0;
@@ -762,6 +771,8 @@ html {
 }
 
 .open-search__icon {
+  width: 30px;
+  height: 29px;
   fill: currentColor;
 }
 
