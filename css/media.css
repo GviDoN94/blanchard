@@ -18,8 +18,34 @@
 }
 
 @media (max-width: 1350px) {
+  /* catalog */
   .accordion__painter-list {
     columns: 2;
+  }
+
+  /* contacts */
+
+  .contacts__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .callback {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .address {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .address__place {
+    margin-bottom: 10px;
+  }
+
+  .messenger {
+    max-width: none;
   }
 }
 
@@ -246,7 +272,22 @@
     padding: 0 53px;
   }
 
-  .partner {
-    min-height: 126px;
+  /* contacts */
+  .contacts__top {
+    padding: 42px 0;
+  }
+
+  .address__location {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .callback {
+    max-width: none;
+  }
+
+  .callback__btn {
+    padding: 10px 40px;
+    min-width: 343px;
   }
 }
