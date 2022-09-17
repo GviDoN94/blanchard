@@ -313,7 +313,7 @@ function init() {
       zoomControlSize: "medium",
       zoomControlPosition: { top: "260px", right: "10px" },
       geolocationControlSize: "large",
-      geolocationControlPosition: { top: "355px", right: "10px" },
+      geolocationControlPosition: { top: "332px", right: "10px" },
     }
   );
   const mapPoint = new ymaps.Placemark(

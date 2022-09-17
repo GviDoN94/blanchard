@@ -194,7 +194,7 @@ html {
 }
 
 .body {
-  min-width: 320px;
+  min-width: 1024px;
   font-family: "Open Sans", "sans-serif";
   font-weight: 400;
   background-color: var(--white);
@@ -1817,7 +1817,7 @@ html {
 }
 
 .partner::before {
-  content: '';
+  content: "";
   position: absolute;
   z-index: 1;
   top: 0;
@@ -2064,6 +2064,8 @@ html {
 }
 
 .social__icon {
+  width: 45px;
+  height: 45px;
   fill: currentColor;
 }
 
