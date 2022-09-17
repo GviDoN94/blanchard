@@ -1635,28 +1635,29 @@ html {
   background-color: var(--text);
 }
 
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
+.events__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: -43px;
   display: none;
 }
 
-.swiper-pagination-bullet {
+.events__pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
+  outline-color: transparent;
   background-color: var(--silver);
   opacity: 1;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, outline-color 0.3s ease-in-out;
 }
 
-.swiper-pagination-bullet-active {
+.events__pagination .swiper-pagination-bullet.focus-visible {
+  outline-color: var(--amethyst);
+}
+
+.events__pagination .swiper-pagination-bullet-active {
   background-color: var(--dove-gray);
 }
 
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets
+.events__pagination.swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
   margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 8px);
 }
@@ -1809,26 +1810,38 @@ html {
 }
 
 .partner {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.partner::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   border: 1px solid var(--silver);
-  min-height: 148px;
-  background-color: var(--white);
   transition: border-color 0.3s ease-in-out;
 }
 
 .partner__img {
+  width: 100%;
   filter: grayscale(1);
   opacity: 0.3;
-  transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition-property: filter, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
-.partner.focus-visible {
+.partner.focus-visible::before {
   border-color: var(--amethyst);
 }
 
-.partner:active:not(.focus-visible) {
+.partner:active:not(.focus-visible)::before {
   border-color: var(--amethyst);
 }
 

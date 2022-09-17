@@ -111,6 +111,14 @@ const eventsSwiper = new Swiper(".events-swiper", {
   pagination: {
     el: ".events__pagination",
     type: "bullets",
+    clickable: true,
+  },
+  a11y: {
+    firstSlideMessage: "Это первый слайд",
+    lastSlideMessage: "Это последний слайд",
+    nextSlideMessage: "Следующий слайд",
+    prevSlideMessage: "Предыдущий слайд",
+    paginationBulletMessage: "Перейти на слайд {{index}}",
   },
   breakpoints: {
     1025: {
@@ -145,12 +153,19 @@ const eventsSwiper = new Swiper(".events-swiper", {
 
 const partnersSwiper = new Swiper(".partners-swiper", {
   allowTouchMove: false,
-  slidesPerGroup: 3,
-  slidesPerView: 3,
+  slidesPerGroup: 2,
+  slidesPerView: 2,
   spaceBetween: 50,
   navigation: {
     prevEl: ".partners__btn-prev",
     nextEl: ".partners__btn-next",
+  },
+  breakpoints: {
+    1025: {
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
   },
   watchSlidesProgress: true,
 

@@ -210,6 +210,11 @@
     padding-bottom: 80px;
   }
 
+  .btn-prev--light-big,
+  .btn-next--light-big {
+    display: none;
+  }
+
   .event-card {
     min-height: 683px;
   }
@@ -232,10 +237,16 @@
     margin-bottom: 5px;
   }
 
-  .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal,
-  .swiper-pagination-custom,
-  .swiper-pagination-fraction {
+  .events__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
     display: block;
+  }
+
+  /* projects */
+  .partners__content {
+    padding: 0 53px;
+  }
+
+  .partner {
+    min-height: 126px;
   }
 }
