@@ -303,6 +303,7 @@
 }
 
 @media (max-width: 768px) {
+  /* header */
   .header__logo-link {
     transform: translate(-4px, 1px);
   }
@@ -338,4 +339,18 @@
     width: 29px;
     height: 29px;
   }
+
+  /* hero */
+  .top-swiper__slide--first {
+    background-image: url("../img/hero-1-768.jpg");
+  }
+
+  .top-swiper__slide--second {
+    background-image: url("../img/hero-2-768.jpg");
+  }
+
+  .top-swiper__slide--third {
+    background-image: url("../img/hero-3-768.jpg");
+  }
+
 }
