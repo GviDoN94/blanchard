@@ -59,7 +59,7 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
   allowTouchMove: false,
   slidesPerGroup: 2,
   slidesPerView: 2,
-  spaceBetween: 34,
+  spaceBetween: 38,
   navigation: {
     prevEl: ".btn-prev--dark",
     nextEl: ".btn-next--dark",
@@ -69,6 +69,11 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
     type: "fraction",
   },
   breakpoints: {
+    769: {
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      spaceBetween: 34,
+    },
     1025: {
       slidesPerGroup: 3,
       slidesPerView: 3,

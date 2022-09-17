@@ -353,4 +353,30 @@
     background-image: url("../img/hero-3-768.jpg");
   }
 
+  /* gallery */
+  .gallery {
+    background-image: url("../img/gallery-bg-768.jpg");
+  }
+
+  .gallery__container {
+    flex-direction: column;
+  }
+  .gallery__left {
+    margin-bottom: 40px;
+    width: auto;
+    max-width: 281px;
+  }
+  .gallery__filter {
+    margin-bottom: 40px;
+  }
+
+  .checkboxes {
+    margin: 0;
+    padding: 0;
+  }
+
+  .gallery__right {
+    padding: 0;
+    width: auto;
+  }
 }

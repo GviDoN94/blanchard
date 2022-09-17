@@ -898,7 +898,6 @@ html {
 
 .gallery__container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
