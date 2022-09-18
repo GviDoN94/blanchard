@@ -432,4 +432,10 @@
   .empty-card__img {
     margin-bottom: 28px;
   }
+
+  /* events */
+  .event-card__museum,
+  .event-card__duration {
+    transform: translate(15px, 1px);
+  }
 }

@@ -56,7 +56,6 @@ const heroSwiper = new Swiper(".top-swiper__container", {
 });
 
 const gallerySwiper = new Swiper(".gallery-swiper", {
-  allowTouchMove: false,
   slidesPerGroup: 2,
   slidesPerView: 2,
   spaceBetween: 38,
@@ -75,6 +74,7 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
       spaceBetween: 34,
     },
     1025: {
+      allowTouchMove: false,
       slidesPerGroup: 3,
       slidesPerView: 3,
       spaceBetween: 50,
@@ -105,10 +105,9 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
 });
 
 const eventsSwiper = new Swiper(".events-swiper", {
-  allowTouchMove: false,
-  slidesPerGroup: 3,
-  slidesPerView: 3,
-  spaceBetween: 27,
+  slidesPerGroup: 2,
+  slidesPerView: 2,
+  spaceBetween: 34,
   navigation: {
     nextEl: ".btn-next--light-big",
     prevEl: ".btn-prev--light-big",
@@ -126,7 +125,13 @@ const eventsSwiper = new Swiper(".events-swiper", {
     paginationBulletMessage: "Перейти на слайд {{index}}",
   },
   breakpoints: {
+    769: {
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+      spaceBetween: 27,
+    },
     1025: {
+      allowTouchMove: false,
       slidesPerGroup: 3,
       slidesPerView: 3,
       spaceBetween: 50,
@@ -157,7 +162,6 @@ const eventsSwiper = new Swiper(".events-swiper", {
 });
 
 const partnersSwiper = new Swiper(".partners-swiper", {
-  allowTouchMove: false,
   slidesPerGroup: 2,
   slidesPerView: 2,
   spaceBetween: 50,
@@ -167,6 +171,7 @@ const partnersSwiper = new Swiper(".partners-swiper", {
   },
   breakpoints: {
     1025: {
+      allowTouchMove: false,
       slidesPerGroup: 3,
       slidesPerView: 3,
       spaceBetween: 50,
