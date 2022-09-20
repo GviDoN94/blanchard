@@ -287,14 +287,39 @@ html {
 }
 
 .burger {
+  position: relative;
   display: none;
+  width: 36px;
+  height: 29px;
   font-size: 0;
   color: var(--white);
   transition: color 0.3s ease-in-out;
 }
 
-.burger__icon {
-  fill: currentColor;
+.burger__line {
+  width: 28.2px;
+  height: 3.65px;
+  background-color: currentColor;
+}
+
+.burger__line::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  right: 0;
+  height: 3.6px;
+  background-color: currentColor;
+}
+
+.burger__line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 12px;
+  height: 4px;
+  background-color: currentColor;
 }
 
 .header__logo-link {
@@ -319,6 +344,11 @@ html {
 
 .nav__close-btn {
   display: none;
+}
+
+.nav__close-btn .close-btn__icon {
+  width: 29px;
+  height: 29px;
 }
 
 .nav__list {
@@ -367,8 +397,7 @@ html {
   display: flex;
   align-items: center;
   padding-left: 25px;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 0;
   color: var(--white);
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
@@ -410,6 +439,8 @@ html {
 
 .enter__arrow {
   margin-left: -4px;
+  width: 18px;
+  height: 13px;
   fill: currentColor;
 }
 
@@ -789,7 +820,7 @@ html {
 
 .hero__title {
   margin: 0;
-  max-width: 600px;
+  max-width: 570px;
   font-weight: 700;
   font-size: 72px;
   line-height: 98px;
@@ -1090,7 +1121,7 @@ html {
 }
 
 .swiper-navigation {
-  display: flex;
+  display: inline-flex;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 30px;
@@ -1293,6 +1324,8 @@ html {
 }
 
 .accordion__icon {
+  width: 50px;
+  height: 50px;
   fill: var(--gallery);
   stroke: var(--gallery);
   transform: rotate(180deg);
@@ -1670,7 +1703,7 @@ html {
 
 .events__pagination.swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
-  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 8px);
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 7.5px);
 }
 
 /* projects */
@@ -1942,6 +1975,10 @@ html {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
+.callback__btn-text--min {
+  display: none;
+}
+
 .callback__btn::before {
   content: "";
   position: absolute;
@@ -2013,6 +2050,11 @@ html {
   position: relative;
   display: inline-block;
   transition: opacity 0.3s ease-in-out;
+}
+
+.messenger__icon {
+  width: 40px;
+  height: 40px;
 }
 
 .messenger__link::before {
