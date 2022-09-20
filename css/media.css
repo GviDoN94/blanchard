@@ -661,6 +661,15 @@
     display: none;
   }
 
+  .empty-card__img {
+    margin-bottom: 17px;
+  }
+
+  .empty-card__descr {
+    margin-bottom: 6px;
+    max-width: 245px;
+  }
+
   .accordion__btn {
     padding: 20px 0;
   }
@@ -689,6 +698,22 @@
 
   .painter-card__lifetime {
     margin-bottom: 13px;
+  }
+
+  .temporary-stub__left {
+    max-width: 90px;
+    min-height: 130px;
+  }
+
+  .temporary-stub__left::before {
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+  }
+
+  .temporary-stub-title {
+    font-size: 18px;
   }
 
   /* events */
@@ -755,7 +780,7 @@
 
   .callback {
     margin-bottom: 20px;
-}
+  }
 
   .callback__input-wrap {
     margin-bottom: 20px;
@@ -795,5 +820,23 @@
 
   .map {
     height: 315px;
+  }
+
+  /* footer */
+  .footer {
+    padding: 20px 0 17px;
+  }
+
+  .footer__container {
+    flex-direction: column-reverse;
+  }
+
+  .social {
+    margin-bottom: 16px;
+  }
+
+  .social__icon {
+    width: 50px;
+    height: 50px;
   }
 }
