@@ -417,7 +417,7 @@
   }
   .gallery__left {
     margin-bottom: 40px;
-    width: auto;
+    width: 100%;
     max-width: 281px;
   }
   .gallery__filter {
@@ -431,7 +431,7 @@
 
   .gallery__right {
     padding: 0;
-    width: auto;
+    width: 100%;
   }
 
   /* catalog */
@@ -617,5 +617,122 @@
   .about-us__descr {
     font-size: 14px;
     line-height: 28px;
+  }
+
+  /* gallery */
+  .gallery {
+    background-image: url("../img/gallery-bg-320.jpg");
+  }
+
+  .gallery__left {
+    margin-bottom: 30px;
+    max-width: none;
+  }
+
+  .gallery__filter {
+    margin-bottom: 30px;
+  }
+
+  .filter__text {
+    margin-bottom: 5px;
+  }
+
+  .gallery__right {
+    /* display: flex; */
+    /* flex-direction: column-reverse; */
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+
+  .swiper-navigation {
+    margin-bottom: 20px;
+  }
+
+  /* .gallery-swiper {
+    display: inline-flex;
+  } */
+
+  /* catalog */
+  .catalog {
+    padding-bottom: 25px;
+  }
+
+  .catalog__descr {
+    display: none;
+  }
+
+  .accordion__btn {
+    padding: 20px 0;
+  }
+
+  .accordion__title {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .accordion__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .accordion__painter-list {
+    columns: 1;
+  }
+
+  .accordion__content-wrap {
+    padding: 21px 0;
+  }
+
+  .painter-card__name {
+    margin-bottom: 8px;
+  }
+
+  .painter-card__lifetime {
+    margin-bottom: 13px;
+  }
+
+  /* events */
+  .events {
+    padding-top: 25px;
+  }
+
+  .event-card__content {
+    padding: 17px 22px 48px;
+  }
+
+  .event-card__museum,
+  .event-card__duration {
+    transform: translate(5px, 1px);
+  }
+
+  .event-card__duration {
+    margin-bottom: 10px;
+  }
+
+  .events__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -32px;
+  }
+
+  /* projects */
+  .projects {
+    padding-top: 29px;
+    border: none;
+  }
+
+  .projects__descr {
+    margin-bottom: 51px;
+  }
+
+  .projects__partners-title {
+    margin-bottom: 11px;
+    font-size: 18px;
+  }
+
+  .partners__content {
+    padding: 0 47px;
+  }
+
+  .partner {
+    min-height: 65px;
   }
 }

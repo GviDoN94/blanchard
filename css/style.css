@@ -1121,7 +1121,7 @@ html {
 }
 
 .swiper-navigation {
-  display: flex;
+  display: inline-flex;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 30px;
@@ -1324,6 +1324,8 @@ html {
 }
 
 .accordion__icon {
+  width: 50px;
+  height: 50px;
   fill: var(--gallery);
   stroke: var(--gallery);
   transform: rotate(180deg);
@@ -1701,7 +1703,7 @@ html {
 
 .events__pagination.swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
-  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 8px);
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 7.5px);
 }
 
 /* projects */

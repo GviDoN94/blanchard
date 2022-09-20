@@ -56,9 +56,9 @@ const heroSwiper = new Swiper(".top-swiper__container", {
 });
 
 const gallerySwiper = new Swiper(".gallery-swiper", {
-  slidesPerGroup: 2,
-  slidesPerView: 2,
-  spaceBetween: 38,
+  slidesPerGroup: 1,
+  slidesPerView: 1,
+  spaceBetween: 34,
   navigation: {
     prevEl: ".btn-prev--dark",
     nextEl: ".btn-next--dark",
@@ -68,6 +68,11 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
     type: "fraction",
   },
   breakpoints: {
+    666: {
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      spaceBetween: 38,
+    },
     769: {
       slidesPerGroup: 2,
       slidesPerView: 2,
@@ -105,8 +110,8 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
 });
 
 const eventsSwiper = new Swiper(".events-swiper", {
-  slidesPerGroup: 2,
-  slidesPerView: 2,
+  slidesPerGroup: 1,
+  slidesPerView: 1,
   spaceBetween: 34,
   navigation: {
     nextEl: ".btn-next--light-big",
@@ -125,6 +130,11 @@ const eventsSwiper = new Swiper(".events-swiper", {
     paginationBulletMessage: "Перейти на слайд {{index}}",
   },
   breakpoints: {
+    666: {
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      spaceBetween: 34,
+    },
     769: {
       slidesPerGroup: 3,
       slidesPerView: 3,
@@ -162,14 +172,19 @@ const eventsSwiper = new Swiper(".events-swiper", {
 });
 
 const partnersSwiper = new Swiper(".partners-swiper", {
-  slidesPerGroup: 2,
-  slidesPerView: 2,
+  slidesPerGroup: 1,
+  slidesPerView: 1,
   spaceBetween: 34,
   navigation: {
     prevEl: ".partners__btn-prev",
     nextEl: ".partners__btn-next",
   },
   breakpoints: {
+    700: {
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      spaceBetween: 34,
+    },
     769: {
       slidesPerGroup: 2,
       slidesPerView: 2,
