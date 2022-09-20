@@ -303,7 +303,7 @@ html {
 }
 
 .burger__line::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 1px;
   left: 0;
@@ -313,7 +313,7 @@ html {
 }
 
 .burger__line::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -344,6 +344,11 @@ html {
 
 .nav__close-btn {
   display: none;
+}
+
+.nav__close-btn .close-btn__icon {
+  width: 29px;
+  height: 29px;
 }
 
 .nav__list {
@@ -392,8 +397,7 @@ html {
   display: flex;
   align-items: center;
   padding-left: 25px;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 0;
   color: var(--white);
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
@@ -435,6 +439,8 @@ html {
 
 .enter__arrow {
   margin-left: -4px;
+  width: 18px;
+  height: 13px;
   fill: currentColor;
 }
 
