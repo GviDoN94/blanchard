@@ -552,18 +552,50 @@
     height: 18px;
   }
 
+  .search--top {
+    padding: 0 15px;
+  }
+
   /* hero */
+  .hero {
+    padding: 30px 0 45px;
+  }
+
   .hero__container {
     align-items: center;
+    text-align: center;
   }
 
   .hero__title {
+    margin-bottom: 2px;
     font-size: 32px;
     line-height: 44px;
   }
 
   .hero__descr {
+    margin-bottom: 41px;
+    max-width: 245px;
+    font-weight: 400;
     font-size: 12px;
     line-height: 16px;
+    transform: translate(0);
+  }
+
+  .hero__link {
+    padding: 9px 16px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .top-swiper__slide--first {
+    background-image: url("../img/hero-1-320.jpg");
+  }
+
+  .top-swiper__slide--second {
+    background-image: url("../img/hero-2-320.jpg");
+  }
+
+  .top-swiper__slide--third {
+    background-image: url("../img/hero-3-320.jpg");
   }
 }
