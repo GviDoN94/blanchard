@@ -62,10 +62,6 @@
 
 @media (max-width: 1024px) {
   /* header */
-  .top-wrap {
-    overflow: hidden;
-  }
-
   .header__top {
     position: relative;
   }
@@ -346,6 +342,17 @@
     flex-wrap: wrap;
   }
 
+  .callback__input-wrap {
+    margin: 0;
+    margin-bottom: 12px;
+    width: calc((100% - 20px) / 2);
+    max-width: none;
+  }
+
+  .callback__btn {
+    min-width: 317px;
+    padding: 11px 28px 10px;
+  }
 }
 
 @media (max-width: 768px) {

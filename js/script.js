@@ -164,7 +164,7 @@ const eventsSwiper = new Swiper(".events-swiper", {
 const partnersSwiper = new Swiper(".partners-swiper", {
   slidesPerGroup: 2,
   slidesPerView: 2,
-  spaceBetween: 35,
+  spaceBetween: 34,
   navigation: {
     prevEl: ".partners__btn-prev",
     nextEl: ".partners__btn-next",
