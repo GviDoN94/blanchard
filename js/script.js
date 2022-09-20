@@ -56,10 +56,9 @@ const heroSwiper = new Swiper(".top-swiper__container", {
 });
 
 const gallerySwiper = new Swiper(".gallery-swiper", {
-  allowTouchMove: false,
   slidesPerGroup: 2,
   slidesPerView: 2,
-  spaceBetween: 34,
+  spaceBetween: 38,
   navigation: {
     prevEl: ".btn-prev--dark",
     nextEl: ".btn-next--dark",
@@ -69,7 +68,13 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
     type: "fraction",
   },
   breakpoints: {
+    769: {
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      spaceBetween: 34,
+    },
     1025: {
+      allowTouchMove: false,
       slidesPerGroup: 3,
       slidesPerView: 3,
       spaceBetween: 50,
@@ -100,10 +105,9 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
 });
 
 const eventsSwiper = new Swiper(".events-swiper", {
-  allowTouchMove: false,
-  slidesPerGroup: 3,
-  slidesPerView: 3,
-  spaceBetween: 27,
+  slidesPerGroup: 2,
+  slidesPerView: 2,
+  spaceBetween: 34,
   navigation: {
     nextEl: ".btn-next--light-big",
     prevEl: ".btn-prev--light-big",
@@ -121,7 +125,13 @@ const eventsSwiper = new Swiper(".events-swiper", {
     paginationBulletMessage: "Перейти на слайд {{index}}",
   },
   breakpoints: {
+    769: {
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+      spaceBetween: 27,
+    },
     1025: {
+      allowTouchMove: false,
       slidesPerGroup: 3,
       slidesPerView: 3,
       spaceBetween: 50,
@@ -152,16 +162,21 @@ const eventsSwiper = new Swiper(".events-swiper", {
 });
 
 const partnersSwiper = new Swiper(".partners-swiper", {
-  allowTouchMove: false,
   slidesPerGroup: 2,
   slidesPerView: 2,
-  spaceBetween: 50,
+  spaceBetween: 34,
   navigation: {
     prevEl: ".partners__btn-prev",
     nextEl: ".partners__btn-next",
   },
   breakpoints: {
-    1025: {
+    769: {
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+    1251: {
+      allowTouchMove: false,
       slidesPerGroup: 3,
       slidesPerView: 3,
       spaceBetween: 50,
@@ -331,26 +346,26 @@ function init() {
 
 /* burger menu */
 const burgerMenuEl = document.querySelector(".nav");
+const bodyEl = document.querySelector(".body");
 
-document
-  .querySelector(".burger")
-  .addEventListener("click", () => burgerMenuEl.classList.add("nav--active"));
+document.querySelector(".burger").addEventListener("click", () => {
+  burgerMenuEl.classList.add("nav--active");
+  bodyEl.classList.add("stop-scroll");
+});
 
-document
-  .querySelector(".nav__close-btn")
-  .addEventListener("click", () =>
-    burgerMenuEl.classList.remove("nav--active")
-  );
+document.querySelector(".nav__close-btn").addEventListener("click", () => {
+  burgerMenuEl.classList.remove("nav--active");
+  bodyEl.classList.remove("stop-scroll");
+});
 
 /* search */
 const searchForm = document.querySelector(".search--top");
+const searchCloseBtn = document.querySelector(".search__close-btn");
 
-document
-  .querySelector(".open-search")
-  .addEventListener("click", () => searchForm.classList.add("search--active"));
+document.querySelector(".open-search").addEventListener("click", () => {
+  searchForm.classList.add("search--active");
 
-document
-  .querySelector(".search__close-btn")
-  .addEventListener("click", () =>
+  searchCloseBtn.addEventListener("click", () =>
     searchForm.classList.remove("search--active")
   );
+});

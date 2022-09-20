@@ -194,7 +194,7 @@ html {
 }
 
 .body {
-  min-width: 1024px;
+  min-width: 320px;
   font-family: "Open Sans", "sans-serif";
   font-weight: 400;
   background-color: var(--white);
@@ -223,6 +223,10 @@ html {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.stop-scroll {
+  overflow: hidden;
 }
 
 .link {
@@ -715,7 +719,7 @@ html {
   display: none;
   width: 319px;
   background-color: var(--black);
-  transform: translate(500px, -50%);
+  transform: translateY(-50%) scale(0);
   transform-origin: right;
   visibility: hidden;
   transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -723,7 +727,7 @@ html {
 
 .search--active {
   visibility: visible;
-  transform: translate(0, -50%);
+  transform: translateY(-50%) scale(1);
 }
 
 .search--top .search__search-btn {
@@ -737,6 +741,11 @@ html {
 
 .search__close-btn {
   transform: translateY(5px);
+}
+
+.search__close-btn .close-btn__icon {
+  width: 23px;
+  height: 23px;
 }
 
 .open-search {
@@ -762,6 +771,8 @@ html {
 }
 
 .open-search__icon {
+  width: 30px;
+  height: 29px;
   fill: currentColor;
 }
 
@@ -887,7 +898,6 @@ html {
 
 .gallery__container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -1353,6 +1363,7 @@ html {
 
 .accordion__painter-btn {
   position: relative;
+  text-align: left;
   padding-right: 3px;
   transition: background-color 0.3s ease-in-out;
 }
@@ -1395,7 +1406,7 @@ html {
   top: 10px;
   bottom: 10px;
   left: 10px;
-  right: 10 px;
+  right: 10px;
   background-color: var(--dusty-gray);
 }
 
@@ -1814,22 +1825,16 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.partner::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border: 1px solid var(--silver);
-  transition: border-color 0.3s ease-in-out;
+  min-height: 150px;
+  outline: 1px solid var(--silver);
+  outline-offset: -1px;
+  font-size: 0;
+  transition-property: outline-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 .partner__img {
-  width: 100%;
   filter: grayscale(1);
   opacity: 0.3;
   transition-property: filter, opacity;
@@ -1837,12 +1842,12 @@ html {
   transition-timing-function: ease-in-out;
 }
 
-.partner.focus-visible::before {
-  border-color: var(--amethyst);
+.partner.focus-visible {
+  outline-color: var(--amethyst);
 }
 
-.partner:active:not(.focus-visible)::before {
-  border-color: var(--amethyst);
+.partner:active:not(.focus-visible) {
+  outline-color: var(--amethyst);
 }
 
 .partner:active:not(.focus-visible) .partner__img {
