@@ -164,13 +164,18 @@ const eventsSwiper = new Swiper(".events-swiper", {
 const partnersSwiper = new Swiper(".partners-swiper", {
   slidesPerGroup: 2,
   slidesPerView: 2,
-  spaceBetween: 50,
+  spaceBetween: 35,
   navigation: {
     prevEl: ".partners__btn-prev",
     nextEl: ".partners__btn-next",
   },
   breakpoints: {
-    1025: {
+    769: {
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+    1251: {
       allowTouchMove: false,
       slidesPerGroup: 3,
       slidesPerView: 3,

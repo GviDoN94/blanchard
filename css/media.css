@@ -276,6 +276,10 @@
     padding: 0 53px;
   }
 
+  .partner {
+    min-height: 128px;
+  }
+
   /* contacts */
   .contacts__top {
     padding: 42px 0;
@@ -336,6 +340,12 @@
     left: 10px;
     right: 10px;
   }
+
+  /* contacts */
+  .callback {
+    flex-wrap: wrap;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -437,5 +447,18 @@
   .event-card__museum,
   .event-card__duration {
     transform: translate(15px, 1px);
+  }
+
+  /* projcets */
+  .projects__descr {
+    margin-bottom: 28px;
+  }
+
+  .projects__partners-title {
+    margin-bottom: 29px;
+  }
+
+  .partner {
+    min-height: 106px;
   }
 }
