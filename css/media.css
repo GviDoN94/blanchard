@@ -477,6 +477,16 @@
     padding: 0 15px;
   }
 
+  .section {
+    padding: 50px 0;
+  }
+
+  .section__title {
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 38px;
+  }
+
   /* header */
   .header__top-container {
     padding-top: 9px;
@@ -597,5 +607,15 @@
 
   .top-swiper__slide--third {
     background-image: url("../img/hero-3-320.jpg");
+  }
+
+  /* about us */
+  .about-us {
+    padding-bottom: 41px;
+  }
+
+  .about-us__descr {
+    font-size: 14px;
+    line-height: 28px;
   }
 }
