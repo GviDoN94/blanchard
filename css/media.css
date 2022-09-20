@@ -716,6 +716,7 @@
   /* projects */
   .projects {
     padding-top: 29px;
+    padding-bottom: 25px;
     border: none;
   }
 
@@ -734,5 +735,65 @@
 
   .partner {
     min-height: 65px;
+  }
+
+  /* contacts */
+  .contacts__top {
+    padding: 25px 0;
+    align-items: flex-start;
+  }
+
+  .address {
+    margin-bottom: 20px;
+  }
+
+  .address__place {
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .callback {
+    margin-bottom: 20px;
+}
+
+  .callback__input-wrap {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .callback__input {
+    padding: 4px 24px;
+    height: 40px;
+  }
+
+  .callback__btn {
+    padding: 11px 33px 9px;
+    min-width: auto;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .callback__btn-text {
+    display: none;
+  }
+
+  .callback__btn-text--min {
+    display: inline;
+  }
+
+  .messenger__title {
+    margin-bottom: 7px;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .messenger__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .map {
+    height: 315px;
   }
 }
