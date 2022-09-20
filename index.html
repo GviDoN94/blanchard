@@ -36,15 +36,11 @@
       <div class="header__top">
         <div class="container header__top-container">
           <button class="burger btn-reset" aria-label="открыть меню навигации">
-            <svg class="burger__icon" width="36" height="29" viewBox="0 0 36 29" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.700012)" />
-              <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" />
-              <path d="M24 25.0479H0V28.7H24V25.0479Z" />
-            </svg>
+            <span class="burger__line"></span>
           </button>
           <a class="header__logo-link">
             <picture>
+              <source media="(max-width: 576px)" srcset="img/logo-320.svg">
               <source media="(max-width: 1024px)" srcset="img/logo-1024.svg">
               <img class="logo" src="img/logo.svg" alt="Логотип Blanchard - художественная галерея">
             </picture>
