@@ -23,6 +23,11 @@ dropMenu.addEventListener("click", (event) => {
         }
       });
       btn.classList.toggle("dropdown-menu__btn--active");
+      if (btn.classList.contains("dropdown-menu__btn--active")) {
+        btn.ariaLabel = "развернуто";
+      } else {
+        btn.ariaLabel = "свернуто";
+      }
     } else {
       btn.classList.remove("dropdown-menu__btn--active");
     }
@@ -66,6 +71,12 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
   pagination: {
     el: ".swiper-navigation__pagination",
     type: "fraction",
+  },
+  a11y: {
+    firstSlideMessage: "Это первый слайд",
+    lastSlideMessage: "Это последний слайд",
+    nextSlideMessage: "Следующий слайд",
+    prevSlideMessage: "Предыдущий слайд",
   },
   breakpoints: {
     666: {
@@ -178,6 +189,12 @@ const partnersSwiper = new Swiper(".partners-swiper", {
   navigation: {
     prevEl: ".partners__btn-prev",
     nextEl: ".partners__btn-next",
+  },
+  a11y: {
+    firstSlideMessage: "Это первый слайд",
+    lastSlideMessage: "Это последний слайд",
+    nextSlideMessage: "Следующий слайд",
+    prevSlideMessage: "Предыдущий слайд",
   },
   breakpoints: {
     700: {
@@ -380,7 +397,8 @@ const searchCloseBtn = document.querySelector(".search__close-btn");
 document.querySelector(".open-search").addEventListener("click", () => {
   searchForm.classList.add("search--active");
 
-  searchCloseBtn.addEventListener("click", () =>
-    searchForm.classList.remove("search--active")
-  );
+  searchCloseBtn.addEventListener("click", () => {
+    searchForm.classList.remove("search--active");
+    document.querySelector(".search__input").value = "";
+  });
 });
