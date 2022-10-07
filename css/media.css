@@ -296,8 +296,17 @@
     min-width: 343px;
   }
 
+  /* modal */
   .modal__container {
-    width: 90%;
+    width: 668px;
+  }
+
+  .modal__paint {
+    width: 264px;
+  }
+
+  .modal__content {
+    padding-right: 36px;
   }
 
   /* footer */
@@ -473,6 +482,15 @@
 
   .partner {
     min-height: 106px;
+  }
+
+  /* modal */
+  .modal__container {
+    width: 594px;
+  }
+
+  .modal__paint {
+    width: 264px;
   }
 }
 
@@ -830,6 +848,29 @@
 
   .map {
     height: 315px;
+  }
+
+  /* modal*/
+  .modal__container {
+    flex-direction: column;
+    width: 290px;
+  }
+
+  .modal__close-btn {
+    top: 10px;
+    right: 10px;
+  }
+
+  .modal__paint {
+    width: 100%;
+  }
+
+  .modal__content {
+    padding: 17px 20px;
+  }
+
+  .modal__paint-date {
+    margin-bottom: 9px;
   }
 
   /* footer */

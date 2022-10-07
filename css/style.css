@@ -2097,8 +2097,8 @@ html {
   overflow-y: auto;
   overflow-x: hidden;
   text-align: center;
-  opacity: 0;
-  visibility: hidden;
+  /* opacity: 0;
+  visibility: hidden; */
   transition: 0.3s;
 }
 
@@ -2113,7 +2113,7 @@ html {
   position: relative;
   width: 900px;
   margin: 50px auto;
-  display: none;
+  display: inline-flex;
   vertical-align: middle;
   background-color: var(--white);
   box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.8);
@@ -2142,9 +2142,9 @@ html {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  padding: 121px 20px 20px 49px;
+  padding: 49px;
+  padding-top: 121px;
 }
-
 
 .modal__painter-name {
   margin: 0;
