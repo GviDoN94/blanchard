@@ -865,6 +865,10 @@
     width: 100%;
   }
 
+  .modal__img {
+    width: 100%;
+  }
+
   .modal__content {
     padding: 17px 20px;
   }

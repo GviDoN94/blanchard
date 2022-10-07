@@ -2086,6 +2086,7 @@ html {
 
 /* modal */
 .modal {
+  --transition-time: 0.3s;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -2097,9 +2098,9 @@ html {
   overflow-y: auto;
   overflow-x: hidden;
   text-align: center;
-  /* opacity: 0;
-  visibility: hidden; */
-  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-time);
 }
 
 .modal::before {
@@ -2113,7 +2114,7 @@ html {
   position: relative;
   width: 900px;
   margin: 50px auto;
-  display: inline-flex;
+  display: none;
   vertical-align: middle;
   background-color: var(--white);
   box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.8);
@@ -2180,20 +2181,30 @@ html {
 .modal.is-open-modal {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity var(--transition-time), visibility var(--transition-time);
 }
 
-.modal__container.modal__open {
+.modal__container.modal-open {
   display: inline-flex;
 }
 
 .fade {
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity var(--transition-time);
 }
 
 .fade.animate-open {
   opacity: 1;
+}
+
+.disable-scroll {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 /* footer */
