@@ -314,11 +314,12 @@
   }
 
   .catalog__left {
+    padding-top: 25px;
     width: auto;
   }
 
   .accordion {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     width: auto;
   }
 

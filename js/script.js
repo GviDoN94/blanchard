@@ -258,11 +258,11 @@ new Accordion(".accordion", {
 });
 
 /* tabs */
-const tabEls = document.querySelectorAll(".accordion__painter-btn");
+const tabEls = document.querySelectorAll(".accordion__painter-link");
 const painterCards = document.querySelectorAll(".painter-card");
 
 document.querySelector(".accordion").addEventListener("click", (event) => {
-  if (!event.target.classList.contains("accordion__painter-btn")) {
+  if (!event.target.classList.contains("accordion__painter-link")) {
     return;
   }
 
@@ -402,3 +402,57 @@ document.querySelector(".open-search").addEventListener("click", () => {
     document.querySelector(".search__input").value = "";
   });
 });
+
+/* scroll */
+document.querySelectorAll(".js-scroll-link").forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const href = this.getAttribute("href").substring(1);
+    const scrollTarget = document.getElementById(href);
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
+
+    window.scrollBy({
+      top: elementPosition,
+      behavior: "smooth",
+    });
+  });
+});
+
+(() => {
+  const MOBILE_WIDTH = 576;
+
+  function getWindowWidth() {
+    return Math.max(
+      document.body.scrollWidth,
+      document.documentElement.scrollWidth,
+      document.body.offsetWidth,
+      document.documentElement.offsetWidth,
+      document.body.clientWidth,
+      document.documentElement.clientWidth
+    );
+  }
+
+  function scrollToContent(link, isMobile) {
+    if (isMobile && getWindowWidth() > MOBILE_WIDTH) {
+      return;
+    }
+
+    const href = link.getAttribute("href").substring(1);
+    const scrollTarget = document.getElementById(href);
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
+
+    window.scrollBy({
+      top: elementPosition,
+      behavior: "smooth",
+    });
+  }
+
+  document.querySelectorAll(".js-scroll-link-mobile").forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      scrollToContent(this, true);
+    });
+  });
+})();

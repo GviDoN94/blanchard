@@ -54,22 +54,22 @@
             </button>
             <ul class="nav__list list-reset">
               <li class="nav__item">
-                <a href="#about-us" class="link nav__link">О&nbsp;нас</a>
+                <a href="#about-us" class="link nav__link js-scroll-link">О&nbsp;нас</a>
               </li>
               <li class="nav__item">
-                <a href="#gallery" class="link nav__link">Галерея</a>
+                <a href="#gallery" class="link nav__link js-scroll-link">Галерея</a>
               </li>
               <li class="nav__item">
-                <a href="#catalog" class="link nav__link">Каталог</a>
+                <a href="#catalog" class="link nav__link js-scroll-link">Каталог</a>
               </li>
               <li class="nav__item">
-                <a href="#events" class="link nav__link">События</a>
+                <a href="#events" class="link nav__link js-scroll-link">События</a>
               </li>
               <li class="nav__item">
-                <a href="#projects" class="link nav__link">Проекты</a>
+                <a href="#projects" class="link nav__link js-scroll-link">Проекты</a>
               </li>
               <li class="nav__item">
-                <a href="#contacts" class="link nav__link">Контакты</a>
+                <a href="#contacts" class="link nav__link js-scroll-link">Контакты</a>
               </li>
             </ul>
             <button class="enter btn-reset">
@@ -440,7 +440,7 @@
           день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.
         </p>
         <div class="catalog__content">
-          <div class="catalog__left">
+          <div class="catalog__left" id="catalog__left">
             <article class="painter-card domenico-ghirlandaio painter-card--active" data-target="domenico-ghirlandaio">
               <picture>
                 <source media="(max-width: 665px)" srcset="img/domenico-ghirlandaio-320.jpg">
@@ -459,7 +459,7 @@
                 (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
               </p>
             </article>
-            <article class="painter-card empty-card" data-target="empty">
+            <article class="painter-card empty-card" id="empty-card" data-target="empty">
               <picture>
                 <source media="(max-width: 665px)" srcset="img/no-painter-320.jpg">
                 <source media="(max-width: 768px)" srcset="img/no-painter-768.jpg">
@@ -488,89 +488,89 @@
                 <div class="accordion__content-wrap">
                   <ul class="accordion__painter-list list-reset">
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Бенедетто
-                        ди&nbsp;Биндо</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Бенедетто
+                        ди&nbsp;Биндо</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Бергоньоне,
-                        Амброджо</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Бергоньоне,
+                        Амброджо</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Биссоло,
-                        Франческо</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Биссоло,
+                        Франческо</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Больтраффио,
-                        Джованни</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Больтраффио,
+                        Джованни</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Бонсиньори,
-                        Франческо</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Бонсиньори,
+                        Франческо</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Боттичини,
-                        Рафаэлло</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Боттичини,
+                        Рафаэлло</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Брамантино</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Брамантино</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Бреа, Людовико</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Бреа, Людовико</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Бьяджо д&rsquo;Антонио
-                        Туччи</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Бьяджо д&rsquo;Антонио
+                        Туччи</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Веккьетта</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Веккьетта</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Андреа Верроккьо</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Андреа Верроккьо</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="domenico-ghirlandaio">Доменико
-                        Гирландайо</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="domenico-ghirlandaio">Доменико
+                        Гирландайо</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Беноццо Гоццоли</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Беноццо Гоццоли</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Граначчи,
-                        Франческо</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Граначчи,
+                        Франческо</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Грегорио ди Чекко</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Грегорио ди Чекко</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Джованни
-                        да&nbsp;Удине</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Джованни
+                        да&nbsp;Удине</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Джованни
-                        ди&nbsp;Паоло</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Джованни
+                        ди&nbsp;Паоло</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Джорджоне</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Джорджоне</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Парентино,
-                        Бернардо</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Парентино,
+                        Бернардо</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Пезеллино</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Пезеллино</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Пьетро Перуджино</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Пьетро Перуджино</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Перуцци,
-                        Бальдассаре</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Перуцци,
+                        Бальдассаре</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Пизанелло</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Пизанелло</a>
                     </li>
                     <li class="accordion__painter-item">
-                      <button class="accordion__painter-btn text btn-reset" data-path="empty">Пинтуриккьо</button>
+                      <a class="accordion__painter-link link text js-scroll-link-mobile" href="#catalog__left" data-path="empty">Пинтуриккьо</a>
                     </li>
                   </ul>
                 </div>

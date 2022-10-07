@@ -131,7 +131,7 @@
     stroke: var(--biloba-flower);
   }
 
-  .accordion__painter-btn:hover:not(.focus-visible)::before {
+  .accordion__painter-link:hover:not(.focus-visible)::before {
     background-color: var(--amethyst);
   }
 
@@ -1394,14 +1394,14 @@ html {
   visibility: visible;
 }
 
-.accordion__painter-btn {
+.accordion__painter-link {
   position: relative;
   text-align: left;
   padding-right: 3px;
   transition: background-color 0.3s ease-in-out;
 }
 
-.accordion__painter-btn::before {
+.accordion__painter-link::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1411,11 +1411,11 @@ html {
   transition: background-color 0.3s ease-in-out;
 }
 
-.accordion__painter-btn.focus-visible {
+.accordion__painter-link.focus-visible {
   background-color: var(--amethyst);
 }
 
-.accordion__painter-btn:active:not(.focus-visible)::before {
+.accordion__painter-link:active:not(.focus-visible)::before {
   background-color: transparent;
 }
 
