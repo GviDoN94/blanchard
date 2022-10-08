@@ -2197,6 +2197,18 @@ html {
   opacity: 1;
 }
 
+.fadeInUp {
+	opacity: 0;
+	transform: scale(0);
+	transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+.fadeInUp.animate-open {
+	opacity: 1;
+	transform: scale(1);
+	transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
 .disable-scroll {
   position: relative;
   overflow: hidden;
