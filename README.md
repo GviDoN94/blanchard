@@ -1,1 +1,1 @@
-# Blanchard is [there](https://gvidon94.github.io/blanchard/)
+# Blanchard is [here](https://blanchard.vladislavsurin.ru/)

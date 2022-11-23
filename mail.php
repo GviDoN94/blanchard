@@ -28,16 +28,16 @@ try {
   $mail->CharSet = "UTF-8";
   $mail->SMTPAuth   = true;
 
-  $mail->Host       = 'smtp.gmail.com';
-  $mail->Username   = 'vladislav.surin.turkish@gmail.com';
+  $mail->Host       = '';
+  $mail->Username   = '';
   $mail->Password   = '';
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('vladislav.surin.turkish@gmail.com', 'Заявка Blanchard');
+  $mail->setFrom('', 'Заявка Blanchard');
 
 
-  $mail->addAddress('vlad_surin@mail.ru');
+  $mail->addAddress('');
 
   $mail->isHTML(true);
   $mail->Subject = $title;
