@@ -230,9 +230,9 @@ html {
 }
 
 .link {
-  display: inline-block;
-  outline: none;
-  text-decoration: none;
+display: inline-block;
+outline: none;
+text-decoration: none;
 }
 
 .container {
