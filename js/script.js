@@ -338,15 +338,16 @@ validation
       errorMessage: "Введите телефон",
     },
     {
-      rule: 'function',
+      rule: "function",
       validator: (name, value) => {
         const phone = inputTel.inputmask.unmaskedvalue();
         return Boolean(+phone && phone.length === 10);
       },
       errorMessage: "Неверный телефон",
     },
-  ]).onSuccess((event) => {
-    console.log('Validation passes and form submitted', event);
+  ])
+  .onSuccess((event) => {
+    console.log("Validation passes and form submitted", event);
 
     let formData = new FormData(event.target);
 
@@ -357,12 +358,12 @@ validation
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          console.log('Отправлено');
+          console.log("Отправлено");
         }
       }
-    }
+    };
 
-    xhr.open('POST', 'mail.php', true);
+    xhr.open("POST", "mail.php", true);
     xhr.send(formData);
 
     event.target.reset();

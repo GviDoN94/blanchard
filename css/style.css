@@ -69,7 +69,9 @@
     padding-left: 4px;
   }
 
-  .dropdown-menu__btn:hover:not(.focus-visible):not(.dropdown-menu__btn--active):not(:active) {
+  .dropdown-menu__btn:hover:not(.focus-visible):not(
+      .dropdown-menu__btn--active
+    ):not(:active) {
     color: var(--heliotrope);
   }
 
@@ -101,9 +103,13 @@
     border-color: var(--heliotrope);
   }
 
-  .btn-prev--dark:hover:not(.focus-visible):not(:active):not(.swiper-button-disabled)
+  .btn-prev--dark:hover:not(.focus-visible):not(:active):not(
+      .swiper-button-disabled
+    )
     .btn-prev__icon,
-  .btn-next--dark:hover:not(.focus-visible):not(:active):not(.swiper-button-disabled)
+  .btn-next--dark:hover:not(.focus-visible):not(:active):not(
+      .swiper-button-disabled
+    )
     .btn-next__icon {
     fill: var(--amethyst);
     stroke: var(--amethyst);
@@ -139,9 +145,13 @@
     background-color: var(--amethyst);
   }
 
-  .btn-prev--light:hover:not(.focus-visible):not(:active):not(.swiper-button-disabled)
+  .btn-prev--light:hover:not(.focus-visible):not(:active):not(
+      .swiper-button-disabled
+    )
     .btn-prev__icon,
-  .btn-next--light:hover:not(.focus-visible):not(:active):not(.swiper-button-disabled)
+  .btn-next--light:hover:not(.focus-visible):not(:active):not(
+      .swiper-button-disabled
+    )
     .btn-next__icon {
     fill: var(--biloba-flower);
     stroke: var(--biloba-flower);
@@ -230,9 +240,9 @@ html {
 }
 
 .link {
-display: inline-block;
-outline: none;
-text-decoration: none;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
 }
 
 .container {
@@ -2198,15 +2208,15 @@ text-decoration: none;
 }
 
 .fadeInUp {
-	opacity: 0;
-	transform: scale(0);
-	transition: opacity var(--transition-time), transform var(--transition-time);
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity var(--transition-time), transform var(--transition-time);
 }
 
 .fadeInUp.animate-open {
-	opacity: 1;
-	transform: scale(1);
-	transition: opacity var(--transition-time), transform var(--transition-time);
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity var(--transition-time), transform var(--transition-time);
 }
 
 .disable-scroll {
