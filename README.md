@@ -2,7 +2,7 @@
 
 A modern and responsive art gallery website built using HTML, CSS, and JavaScript, with a focus on mobile adaptability and accessibility. The site includes a range of interactive elements and integrates various third-party libraries to enhance user experience.
 
-**You can look at it [here](https://blanchard.gvidon94.ru/)**
+**You can view it [here](https://blanchard.gvidon94.ru/)**
 
 ## Features
 
