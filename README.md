@@ -1,5 +1,9 @@
 # Blanchard Art Gallery Website
 
+![Vite](https://img.shields.io/badge/HTML-blue.svg?logo=html5)
+![Vite](https://img.shields.io/badge/CSS-blue.svg?logo=css3)
+![Vite](https://img.shields.io/badge/JS-blue.svg?logo=javascript)
+
 A modern and responsive art gallery website built using HTML, CSS, and JavaScript, with a focus on mobile adaptability and accessibility. The site includes a range of interactive elements and integrates various third-party libraries to enhance user experience.
 
 **You can view it [here](https://blanchard.gvidon94.ru/)**
